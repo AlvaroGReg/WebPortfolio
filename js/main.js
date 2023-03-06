@@ -2,6 +2,7 @@
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
+     
 
 if(navToggle) {
     navToggle.addEventListener('click', () =>  {
@@ -83,11 +84,42 @@ window.addEventListener('scroll', scrollUp)
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',
-    duration: 2500,
-    delay: 300
+    duration: 2000,
+    delay: 200
 })
 
 sr.reveal(`.home-swiper, .new-swiper, .newslc`)
 sr.reveal(`.categorydata, .footercontent`, {interval: 100})
 sr.reveal(`.aboutdata, .discountimg`, {origin: 'left'})
 sr.reveal(`.aboutimg, .discountdata`, {origin: 'left'})
+
+//THEMES
+
+const themeChange = document.getElementById('light-mode')
+
+themeChange.addEventListener('click',toggleTheme)
+
+// function to set a given theme/color-scheme
+
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+
+// function to toggle between light and dark theme
+
+function toggleTheme() {
+   if (localStorage.getItem('theme') === 'theme-dark'){
+       setTheme('theme-light');
+   } else {
+       setTheme('theme-dark');
+   }
+}
+// Immediately invoked function to set the theme on initial load
+(function () {
+   if (localStorage.getItem('theme') === 'theme-dark') {
+       setTheme('theme-dark');
+   } else {
+       setTheme('theme-light');
+   }
+})();

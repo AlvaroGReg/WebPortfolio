@@ -14,48 +14,58 @@
 
     <title>Reponsive web</title>
   </head>
-  <body>
+  <body class="bodyMain">
+
     <!--Header-->
 
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="" class="navL">
-          <img src="img/favicon.png" alt="favicon" class="navL-img" />
-          Nube
-        </a>
 
-        <div class="navM" id="nav-menu">
-          <ul class="navList">
-            <li class="navItem">
-              <a href="#home" class="navLink active-link"> Inicio </a>
-            </li>
-            <li class="navItem">
-              <a href="#about" class="navLink"> Nosotros </a>
-            </li>
-            <li class="navItem">
-              <a href="#product" class="navLink"> Productos </a>
-            </li>
-            <li class="navItem">
-              <a href="#new" class="navLink"> Nuevos </a>
-            </li>
-            <li class="navItem">
-              <a href="#" class="navLink"> Soporte </a>
-            </li>
-          </ul>
+      <div class="navToggle" id="nav-toggle">
+        <i class="bx bx-grid-alt"></i>
+      </div>
 
-          <div class="navclose" id="nav-close">
-            <i class="bx bx-x"></i>
-          </div>
+      <div class="navM" id="nav-menu">
+        <ul class="navList">
+          
+          <li class="navItem">
+            <a href="#home" class="navLink active-link"> Inicio </a>
+          </li>
+
+          <li class="navItem">
+            <a href="#about" class="navLink"> Nosotros </a>
+          </li>
+
+          <li class="navItem">
+            <a href="#product" class="navLink"> Productos </a>
+          </li>
+
+          <li class="navItem">
+            <a href="#webprojects" class="navLink"> Web projects </a>
+          </li>
+
+          <li class="navItem">
+            <a href="#new" class="navLink"> Nuevos </a>
+          </li>
+
+        </ul>
+
+        <div class="navclose" id="nav-close">
+          <i class="bx bx-x"></i>
         </div>
+      </div>
 
-        <div class="navToggle" id="nav-toggle">
-          <i class="bx bx-grid-alt"></i>
-        </div>
+      <div class="lightmode" id="light-mode">
+        <i class="bx bx-sun"></i>
+      </div>
+
       </nav>
     </header>
 
     <main class="main">
+
       <!--HOME-->
+
       <section class="home container" id="home">
         <div class="swiper home-swiper">
           <div class="swiper-wrapper">
@@ -119,6 +129,7 @@
       </section>
 
       <!--ABOUT-->
+
       <section class="section about" id="about">
         <div class="aboutcontainer container grid">
           <img src="img/about-img.png" alt="" class="aboutimg" />
@@ -133,6 +144,7 @@
       </section>
 
       <!--PRODUCTS-->
+
       <section class="section product" id="product">
         <h2 class="sectiontitle">Productos</h2>
 
@@ -194,26 +206,39 @@
         </div>
       </section>
 
-      <!--DESCUENTO-->
-      <section class="section discount">
-        <div class="discountcontainer container grid">
-          <div class="discountdata">
-            <h2 class="discounttitle">80% Descuento <br />Productos</h2>
-            <a href="#" class="button">Vamos</a>
+      <!--WEB PROJECTS-->
+
+      <section class="section discount" id="webprojects">
+
+        <div class="webprojectscontainer container grid">
+
+          <h2 class="webprojectstitle">Web Projects</h2>
+
+          <div class="pelotitacontainer">
+            <a href="nested/dvdAnimation/index.html" target="_blank">
+              <h4 class="webprojectname">DVD Animation</h4>
+            <iframe class="pelotitaframe" src="nested/dvdAnimation/balldemo.html" frameborder="0"></iframe>
+            </a>
           </div>
-          <img src="img/discount-img.png" alt="" class="discountimg" />
+          
+          <div class="pokedexcontainer">
+            <a href="nested/webpokedex/" target="_blank">
+              <h4 class="webprojectname">Pokédex</h4>
+            <iframe class="pokedexframe" src="nested/webpokedex/pokedexdemo.html" frameborder="0"></iframe>
+          </a>
+          </div>
         </div>
       </section>
 
       <!--LO NUEVO-->
       <section class="section new" id="new">
-        <h2 class="sectiontitle">Nuevos</h2>
+        <h2 class="sectiontitle">Novedades</h2>
 
         <div class="newcontainer container">
           <div class="swiper new-swiper">
             <div class="swiper-wrapper">
               <div class="newcontent swiper-slide">
-                <div class="newtag">Nuvo</div>
+                <div class="newtag">Nuevo</div>
                 <img src="img/productos4.png" alt="" class="newimg" />
                 <h3 class="newtitle">Lorem</h3>
                 <span class="newsubtitle">lorem</span>
@@ -226,7 +251,7 @@
                 </div>
               </div>
               <div class="newcontent swiper-slide">
-                <div class="newtag">Nuvo</div>
+                <div class="newtag">Nuevo</div>
                 <img src="img/productos2.png" alt="" class="newimg" />
                 <h3 class="newtitle">Lorem</h3>
                 <span class="newsubtitle">lorem</span>
@@ -240,7 +265,7 @@
               </div>
 
               <div class="newcontent swiper-slide">
-                <div class="newtag">Nuvo</div>
+                <div class="newtag">Nuevo</div>
                 <img src="img/productos3.png" alt="" class="newimg" />
                 <h3 class="newtitle">Lorem</h3>
                 <span class="newsubtitle">lorem</span>
@@ -270,7 +295,9 @@
         </div>
       </section>
     </main>
+
     <!--FOOTER-->
+
     <footer class="footer section">
       <div class="footercontainer container grid">
         <div class="footercontent">
@@ -343,7 +370,7 @@
         </div>
       </div>
 
-      <span class="footercopy">lorem</span>
+      <span class="footercopy">AGReg</span>
     </footer>
 
     <!--FOOTER-->
