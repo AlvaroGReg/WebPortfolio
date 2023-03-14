@@ -123,3 +123,14 @@ function toggleTheme() {
        setTheme('theme-light');
    }
 })();
+
+//OPEN DIVS OF WEB PROJECTS
+
+const btns_opendescription = document.querySelectorAll(".btnwebproject")
+
+btns_opendescription.forEach(button=>{
+    button.addEventListener("click", ()=>{
+
+        
+    })
+})

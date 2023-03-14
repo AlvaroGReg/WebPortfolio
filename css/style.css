@@ -7,7 +7,7 @@
     --color-background-end: #08174a;
 
     --color-primary: #3678ff;
-    --color-secondary:#000c32;
+    --color-secondary:#000c32da;
     --color-accent: #0557fc;
 
     --font-color: #fff;
@@ -16,14 +16,14 @@
 }
 
 .theme-light{
-    --color-background-start:#e6eefa;    
-    --color-background-end: #c6cbfc;
+    --color-background-start:#f5ff9a;    
+    --color-background-end: #e9b9ff;
 
-    --color-primary: #bebef6;
-    --color-secondary:#aca3e7;
-    --color-accent: #6e7cfa;
+    --color-primary: #d54dff;
+    --color-secondary:#feffbcab;
+    --color-accent: #ff00dd;
 
-    --font-color: #16005e;
+    --font-color: #33003a;
     --scroll-background: #dfe6ff;
     --scroll-bar: #a2a5ee;
 }
@@ -147,10 +147,19 @@ button {
   cursor: pointer;
 }
 
+.iconsdiv{
+    display: flex;
+}
+
 .lightmode {
     font-size: 1.25rem;
     cursor: pointer;
   }
+
+.ducklogo{
+    width: 3.5ex;
+    margin-left: 3ex;
+}
 
 @media (max-width: 767px) {
   .navM {
@@ -382,7 +391,7 @@ button {
 }
 
 
-.productbutton {
+.btnwebproject {
     display: inline-flex;
     padding: .5rem;
     border-radius: .25rem .25rem .75rem .25rem;
@@ -400,7 +409,7 @@ button {
     transform: translateY(-.5rem);
 }
 
-.productcontent:hover .productbutton {
+.productcontent:hover .btnwebproject {
     right: 0;
 }
 
