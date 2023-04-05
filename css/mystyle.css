@@ -5,13 +5,18 @@
     text-decoration: none;
 }
 
+@font-face {
+    font-family: 'basictext';
+    src: url('../res/fonts/Champagne\ &\ Limousines.ttf');
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 .button {
     display: inline-block;
-    background-color: var(--color-primary);
+    background-color: var(--primary-color);
     color: var(--font-color);
     padding: 1rem 1.75rem;
     border-radius: .5rem;
@@ -23,41 +28,44 @@ html {
     background-color: var(--color-accent);
 }
 
-
-.buttonicon {
-    font-size: 1.25rem;
-}
-
-p,h1,h2,h3,h4{
-    color: var(--font-color);
-}
-
+p,
 h1,
 h2,
 h3,
 h4 {
-  color: var(--font-color);
-  font-weight: 600;
+    color: var(--font-color);
+    font-family: 'basictext';
 }
 
 a:-webkit-any-link {
     color: var(--font-color);
 }
 
-i{
+i {
     color: var(--font-color);
 }
 
+i:hover{
+    color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 600;
+}
+
 .theme-dark {
-    --background-color: #002409;
+    --background-color: #080007;
     --background-second: #3c3800;
 
-    --font-color: #ffffff;
+    --font-color: #f2ffb9;
 
     --shade-dark: #0000004b;
     --shade-light: #ffffff3e;
 
-    --primary-color: #00cee1;
+    --primary-color: #d100c7;
     --secondary-color: #22009d;
     --color-accent: #fb00ff;
 
@@ -66,7 +74,7 @@ i{
 }
 
 .theme-light {
-    --background-color: #ff8f8f;
+    --background-color: #ffafaf;
     --background-second: #fff333;
 
     --font-color: #000;
@@ -74,16 +82,35 @@ i{
     --shade-dark: #0000004b;
     --shade-light: #ffffff3e;
 
-    --primary-color: #c40000;
+    --primary-color: #b96eff;
     --secondary-color: #ff9900;
-    --color-accent: #ff00b3;
+    --color-accent: #ff38c3;
 
     --scroll-background: #ffa930;
     --scroll-bar: #463000;
 }
 
-body{
+body {
     background-color: var(--background-color);
 }
 
-img { color: var(--font-color); text-align: center; }
+img {
+    color: var(--font-color);
+    text-align: center;
+}
+
+/*NAVBAR*/
+
+/*HOME*/
+
+/*ABOUT ME*/
+
+/*WEB PROJECTS*/
+
+/*OTHER PROJECTS*/
+
+/*SKILLS*/
+
+/*CONTACT*/
+
+/*FOOTER*/
