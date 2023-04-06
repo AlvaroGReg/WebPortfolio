@@ -43,11 +43,9 @@ a:-webkit-any-link {
     transition: 1s;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
 }
 
-a:-webkit-any-link:hover {
-    background-color: var(--background-color);
-}
 
 i {
     color: var(--font-color);
@@ -164,6 +162,10 @@ img {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+}
+
+.webprojects>.articlescontainer>article>.invisiblediv > a:-webkit-any-link:hover {
+    background-color: var(--background-color);
 }
 
 .webprojects>.articlescontainer>article:hover .invisiblediv{
