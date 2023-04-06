@@ -14,28 +14,28 @@
     <!--HEADER AND SOCIAL-->
     <header>
         <nav>
-            <div class="navtoggle">
+            <div class="navtoggle" id="navtoggle">
                 <i class="bx bx-grid-alt"></i>
             </div>
-            <div class="navM">
+            <div class="navM" id="navM">
                 <ul>
                     <li>
-                        <a href="#home">Inicio</a>
+                        <a href="#home"><p>Inicio</p></a>
                     </li>
                     <li>
-                        <a href="#about">Sobre mí</a>
+                        <a href="#about"><p>Sobre mí</p></a>
                     </li>
                     <li>
-                        <a href="#webprojects">Proyectos Web</a>
+                        <a href="#webprojects"><p>Proyectos Web</p></a>
                     </li>
                     <li>
-                        <a href="#otherprojects">Otros Proyectos</a>
+                        <a href="#otherprojects"><p>Otros Proyectos</p></a>
                     </li>
                     <li>
-                        <a href="#skills">Habilidades</a>
+                        <a href="#skills"><p>Habilidades</p></a>
                     </li>
                     <li>
-                        <a href="#contact">Contacto</a>
+                        <a href="#contact"><p>Contacto</p></a>
                     </li>
                 </ul>
 
@@ -52,36 +52,36 @@
             </div>
         </nav>
     </header>
-
+<main>
     <!--HOME-->
-    <section id="home">
-        <div class="homeleft">
+    <section class="home" id="home">
+        <div class="homeimgdiv">
+            <img src="res/logo/Logo agreg.png" alt="Logo AGReg">
+        </div>
+        <div class="hometxtdiv">
             <div class="homedata">
-                <h1>AGReg</h1>
+                <h1 class="mainname">AGReg</h1>
                 <p>Programador web y android.</p>
             </div>
             <div class="homebuttons">
                 <a class="button" href="#webprojects">Proyectos</a>
-                <a class="button" href="#contact">Contacta</a>
+                <a class="button" href="#contact">Contactar</a>
             </div>
         </div>
-        <div class="homeright">
-            <img src="res/logo/Logo agreg.png" alt="Logo AGReg">
-        </div>
+     
     </section>
 
     <!--ABOUT ME-->
 
     <section class="aboutme" id="about">
         <div class="aboutdata">
-            <h2>Sobre mí</h2>
+            <h2 class="sectiontitle">Sobre mí</h2>
             <p>Empecé a programar en 2021, a raiz de la pandemia tomé la decisión de cambiar de profesión y
                 escogí estudiar para desarrollar aplicaciones android. Empecé de forma autodidacta: documentación,
                 pequeños tutoriales y cursos de Udemy (gracias Ubaldo Acosta &lt;3).
                 <br />
-                Como un año más tarde intenté trabajar
-                en el sector sintiendo que no podía aprender más por mí mismo, esto se dificultó y, tras consultarlo con
-                amigos que trabajan en el sector, me recomendaron que empezara con web para acceder antes al mundo
+                Como un año más tarde intenté acceder al mercado laboral, sintiendo que no podía aprender más por mí mismo, pero esto se dificultó y, tras consultarlo con
+                profesionales del sector, me recomendaron que empezara con web para acceder antes al mundo
                 laboral
                 y... Aquí estamos.
             </p>
@@ -93,7 +93,7 @@
 
     <section class="webprojects" id="webprojects">
 
-        <div class="webprojectsheader">
+        <div class="sectiontitle">
             <h2>Proyectos web</h2>
         </div>
 
@@ -146,8 +146,8 @@
 
     <!--OTHER PROJECTS-->
     <section id="otherprojects">
-        <div class="sectionheader">
-            <h2>Other Projects</h2>
+        <div class="sectiontitle">
+            <h2>Otros Proyectos</h2>
         </div>
         <article>
             <div class="visiblediv">
@@ -196,85 +196,57 @@
 
     <!--SKILLS-->
 
-    <section id="skills">
+    <section class="skills" id="skills">
         <div class="sectiontitle">
             <h2>Habilidades</h2>
         </div>
+
         <div class="gridskills">
             <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
+                <img src="res/logo/skills/logo-java.png" alt="Java">
+                <p>Java</p>
             </div>
 
             <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
+                <img src="res/logo/skills/logo-kotlin.png" alt="Kotlin">
+                <p>Kotlin</p>
             </div>
 
             <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
+                <img src="res/logo/skills/logo-js.png" alt="JavaScript">
+                <p>JavaScript</p>
             </div>
 
             <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
-            </div>
-
-            <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
-            </div>
-
-            <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
-            </div>
-
-            <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
-            </div>
-
-            <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
-            </div>
-
-            <div class="skillsitem">
-                <img src="" alt="logo">
-                <p>Skill</p>
+                <img src="res/logo/skills/logo-css.avif" alt="CSS">
+                <p>CSS</p>
             </div>
         </div>
     </section>
 
     <!--CONTACT-->
-    <section id="contact">
+    <section class="contact" id="contact">
 
         <div class="sectiontitle">
-            <h2>Contact</h2>
+            <h2>Contacto</h2>
         </div>
 
         <div class="socialmedialinks">
             <div class="socialmediaitem">
-                <img src="" alt="socialmediaimg">
+                <img src="res/logo/social/logo mail.png" alt="socialmediaimg">
                 <p>Mail</p>
             </div>
             <div class="socialmediaitem">
-                <img src="" alt="socialmediaimg">
+                <img src="res/logo/social/github.png" alt="socialmediaimg">
                 <p>Github</p>
             </div>
             <div class="socialmediaitem">
-                <img src="" alt="socialmediaimg">
+                <img src="res/logo/social/Telegram_logo.png" alt="socialmediaimg">
                 <p>Telegram</p>
             </div>
             <div class="socialmediaitem">
-                <img src="" alt="socialmediaimg">
+                <img src="res/logo/social/linkedin.png" alt="socialmediaimg">
                 <p>LinkdIn</p>
-            </div>
-            <div class="socialmediaitem">
-                <img src="" alt="socialmediaimg">
-                <p>Discord</p>
             </div>
         </div>
 
@@ -291,14 +263,14 @@
             </form>
         </div>
     </section>
-
+</main>
     <!--FOOTER-->
     <footer>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quia nobis numquam? Nostrum optio, repudiandae
             ipsam suscipit aliquid mollitia, sunt tempore illum veritatis architecto perspiciatis ipsa iste voluptates
             id a consectetur recusandae, neque laudantium sint cupiditate consequatur fugit adipisci quos!</p>
         <p>Copyright Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, hic.</p>
-        <img src="res/logo/Logo agreg.png" alt="">
+        <img src="res/logo/Logo letra.png" alt="Logo AGREG">
     </footer>
 </body>
 <script src="js/main.js"></script>
