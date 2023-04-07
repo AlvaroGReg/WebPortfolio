@@ -76,7 +76,7 @@ h4 {
 
     --shade: #0000009c;
 
-    --primary-color: #d100c7;
+    --primary-color: #8b0085;
     --secondary-color: #22009d;
     --color-accent: #fb00ff;
 
@@ -95,7 +95,7 @@ h4 {
 
     --primary-color: #b96eff;
     --secondary-color: #ff9900;
-    --color-accent: #ff38c3;
+    --color-accent: #ff61d0;
 
     --scroll-background: #ffa930;
     --scroll-bar: #463000;
@@ -345,6 +345,7 @@ header>nav>.iconsmargin>.ducklogo {
 }
 .skills>.gridskills {
     background-color: var(--primary-color);
+    border-radius: 5px;
     display: grid; 
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
@@ -367,6 +368,9 @@ header>nav>.iconsmargin>.ducklogo {
 }
 
 .contact>.socialmedialinks{
+    padding: 5ex;
+    border-radius: 25px;
+    background-color: var(--primary-color);
     display: flex;
     margin: 10vh;
     gap: 10vh;
