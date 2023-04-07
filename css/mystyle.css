@@ -69,7 +69,7 @@ h4 {
 
 .theme-dark {
     --background-color: #080007;
-    --background-second: #3c3800;
+    --background-second: #3a003c;
 
     --font-color: #f2ffb9;
     --font-color2: #000;
@@ -113,6 +113,18 @@ img {
 
 section {
     margin-top: 40vh;
+}
+
+.sectiontitle{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+.background{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*HEADER*/
@@ -343,68 +355,76 @@ header>nav>.iconsmargin>.ducklogo {
     flex-direction: column;
     align-items: center;
 }
+
 .skills>.gridskills {
     background-color: var(--primary-color);
     border-radius: 5px;
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: 1fr 1fr;
     padding: 10px;
-  }
-  .skills>.gridskills>.skillsitem{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+}
 
-  }
-  .skills>.gridskills>.skillsitem>img{
-    width: 100px;
-  }
-/*CONTACT*/
-.contact{
+.skills>.gridskills>.skillsitem{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contact>.socialmedialinks{
-    padding: 5ex;
+.skills>.gridskills>.skillsitem>img{
+    width: 100px;
+}
+
+
+/*CONTACT*/
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact>.socialmedialinks {
     border-radius: 25px;
     background-color: var(--primary-color);
     display: flex;
-    margin: 10vh;
-    gap: 10vh;
+    margin: 7vh;
+    gap: 6vh;
 }
 
-.contact>.socialmedialinks>.socialmediaitem{
-    width: 5vh;
+.contact>.socialmedialinks>a>.socialmediaitem {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.contact>.socialmedialinks>.socialmediaitem>img{
-    width: 50px;
-    height: 50px;
+    margin: 0.5em;
+    transition: 0.7s;
 }
 
-.contact>.maildiv>form{
+.contact>.socialmedialinks>a>.socialmediaitem:hover{
+    transform: scale(1.1);
+}
+
+.contact>.socialmedialinks>a>.socialmediaitem>img {
+    width: 45px;
+    height: 45px;
+}
+
+.contact>.maildiv>form {
     display: flex;
     flex-direction: column;
 }
 
-.contact>.maildiv>form>textarea{
-
-}
+.contact>.maildiv>form>textarea {}
 
 /*FOOTER*/
 
-footer{
+footer {
+    margin-top: 50px;
     font-size: 0.6em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-footer>img{
+footer>img {
     width: 50px;
 }

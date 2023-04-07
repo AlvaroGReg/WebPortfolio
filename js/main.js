@@ -4,7 +4,6 @@ const navMenu = document.getElementById('navM'),
     navClose = document.getElementById('navclose');
 
 if (navToggle) {
-    console.log('clic')
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu');
     })
@@ -43,7 +42,6 @@ function setTheme(themeName) {
 // function to toggle between light and dark theme
 
 function toggleTheme() {
-    console.log('asd')
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-light');
     } else {
@@ -58,3 +56,8 @@ function toggleTheme() {
         setTheme('theme-light');
     }
 })();
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', '../particles/particles-config.json', function() {
+    console.log('callback - particles.js config loaded');
+  });
