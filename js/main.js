@@ -52,12 +52,9 @@ let scrolling = 0;
 let scrollFlag = 1;
 
 function scrollEvent(event){
-  console.log(event);
-
   if (event.deltaY < 0) {
     console.log("deltay");
     if (scrolling !== 0) {
-      console.log("scrolling");
       scrolling += 100;
       document.getElementById(
         "wrapper"
@@ -78,7 +75,7 @@ window.addEventListener("wheel", function (event) {
     setTimeout(()=>{
       scrollEvent(event)
       scrollFlag = 1;
-    },1000)
+    },500)
     scrollFlag = 0;
   }
 });
