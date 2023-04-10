@@ -15,17 +15,6 @@ if (navClose) {
     })
 }
 
-/* remove menu mobile*/
-/*const navLink = document.querySelectorAll('.navLink')
-
-function linkAction() {
-    const navMenu = document.getElementById('nav-menu')
-
-    navMenu.classList.remove('show-menu')
-}
-
-navLink.forEach(n => n.addEventListener('click', linkAction))
-*/
 //THEMES
 
 const themeChange = document.getElementById('light-mode')
@@ -57,7 +46,48 @@ function toggleTheme() {
     }
 })();
 
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-particlesJS.load('particles-js', '../particles/particles-config.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
+// SCROLL //
+
+let scrolling = 0;
+let scrollFlag = 1;
+
+function scrollEvent(event){
+  console.log(event);
+
+  if (event.deltaY < 0) {
+    console.log("deltay");
+    if (scrolling !== 0) {
+      console.log("scrolling");
+      scrolling += 100;
+      document.getElementById(
+        "wrapper"
+      ).style.transform = `translateY(${scrolling}vh)`;
+    }
+  } else if (event.deltaY > 0) {
+    if (scrolling > -500) {
+      scrolling -= 100;
+      document.getElementById(
+        "wrapper"
+      ).style.transform = `translateY(${scrolling}vh)`;
+    }
+  }
+}
+
+window.addEventListener("wheel", function (event) {
+  if(scrollFlag === 1){
+    setTimeout(()=>{
+      scrollEvent(event)
+      scrollFlag = 1;
+    },1000)
+    scrollFlag = 0;
+  }
+});
+
+function wrapperScroll(sectionPosition){
+
+    scrolling = sectionPosition;
+
+    document.getElementById(
+        "wrapper"
+      ).style.transform = 'translateY(' + sectionPosition + 'vh)';
+}
