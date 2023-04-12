@@ -52,22 +52,13 @@ let scrolling = 0;
 let scrollFlag = 1;
 
 function scrollEvent(event){
-  if (event.deltaY < 0) {
-    console.log("deltay");
-    if (scrolling !== 0) {
-      scrolling += 100;
-      document.getElementById(
-        "wrapper"
-      ).style.transform = `translateY(${scrolling}vh)`;
-    }
-  } else if (event.deltaY > 0) {
-    if (scrolling > -500) {
+  
+  if (event.deltaY < 0 && scrolling !== 0) {
+      scrolling = parseInt(scrolling) + 100;
+  } else if (event.deltaY > 0 && scrolling > -500) {
       scrolling -= 100;
-      document.getElementById(
-        "wrapper"
-      ).style.transform = `translateY(${scrolling}vh)`;
-    }
   }
+  wrapperScroll(scrolling);
 }
 
 window.addEventListener("wheel", function (event) {
@@ -81,9 +72,8 @@ window.addEventListener("wheel", function (event) {
 });
 
 function wrapperScroll(sectionPosition){
-
+  
     scrolling = sectionPosition;
-
     document.getElementById(
         "wrapper"
       ).style.transform = 'translateY(' + sectionPosition + 'vh)';
