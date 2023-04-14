@@ -53,7 +53,7 @@ let scrollFlag = 1;
 
 function scrollEvent(event) {
 
-    if (event.deltaY < 0 && scrolling !== 0) {
+    if (event.deltaY < 0 && scrolling < 0) {
         scrolling = parseInt(scrolling) + 100;
     } else if (event.deltaY > 0 && scrolling > -500) {
         scrolling -= 100;
@@ -78,7 +78,9 @@ function wrapperScroll(sectionPosition) {
         "wrapper"
     ).style.transform = 'translateY(' + sectionPosition + 'vh)';
 
-    changeActive(sectionPosition)
+    changeActive(sectionPosition);
+
+
 }
 
 //SCROLL ACTIVES NAVBAR
@@ -123,5 +125,35 @@ function changeActive(position) {
             document.getElementById("dotcontact").classList.add('marked');
             break;
     }
-
 }
+
+//ANIMATION ON SCROLL
+
+// Make buttons visible
+Array.from(document.querySelectorAll('.button')).forEach(element => {
+
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.classList.add('visibleanimation');
+            }
+        })
+    })
+    observer.observe(element);
+});
+
+//Section titles
+
+Array.from(document.querySelectorAll('.sectiontitle')).forEach(element => {
+
+    const observer = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+            if(entry.isIntersecting){
+                entry.target.style.animation  = "write 3s";
+                entry.target.style.opacity  = "1";
+                
+            }
+        })
+    })
+    observer.observe(element);
+});
