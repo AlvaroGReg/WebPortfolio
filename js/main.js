@@ -51,16 +51,6 @@ function toggleTheme() {
 let scrolling = 0;
 let scrollFlag = 1;
 
-function scrollEvent(event) {
-
-    if (event.deltaY < 0 && scrolling < 0) {
-        scrolling = parseInt(scrolling) + 100;
-    } else if (event.deltaY > 0 && scrolling > -500) {
-        scrolling -= 100;
-    }
-    wrapperScroll(scrolling);
-}
-
 window.addEventListener("wheel", function (event) {
     if (scrollFlag === 1) {
         setTimeout(() => {
@@ -71,16 +61,24 @@ window.addEventListener("wheel", function (event) {
     }
 });
 
-function wrapperScroll(sectionPosition) {
+function scrollEvent(event) {
 
+    if (event.deltaY < 0 && scrolling < 0) {
+        scrolling = parseInt(scrolling) + 100;
+    } else if (event.deltaY > 0 && scrolling > -500) {
+        scrolling -= 100;
+    }
+    wrapperScroll(scrolling);
+}
+
+function wrapperScroll(sectionPosition) {
+ 
     scrolling = sectionPosition;
     document.getElementById(
         "wrapper"
     ).style.transform = 'translateY(' + sectionPosition + 'vh)';
 
     changeActive(sectionPosition);
-
-
 }
 
 //SCROLL ACTIVES NAVBAR
@@ -98,7 +96,8 @@ function changeActive(position) {
     dots.forEach(element => {
         element.classList.remove('marked');
     });
-    switch (position) {
+
+    switch (parseInt(position)) {
 
         case 0:
             document.getElementById("sectionhome").classList.add('active');
