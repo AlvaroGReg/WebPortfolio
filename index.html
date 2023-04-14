@@ -20,36 +20,48 @@
             </div>
             <div class="navM" id="navM">
                 <ul>
-                    <li>
-                        <a onclick='wrapperScroll("0")'>
+
+                    <a onclick='wrapperScroll("0")' id="sectionhome" class="active">
+                        <li>
                             <p>Inicio</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a onclick='wrapperScroll("-100")'>
+                        </li>
+                    </a>
+
+
+                    <a onclick='wrapperScroll("-100")' id="sectionabout">
+                        <li>
                             <p>Sobre mí</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a onclick='wrapperScroll("-200")'>
+                        </li>
+                    </a>
+
+
+                    <a onclick='wrapperScroll("-200")' id="sectionweb">
+                        <li>
                             <p>Proyectos Web</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a onclick='wrapperScroll("-300")'>
+                        </li>
+                    </a>
+
+
+                    <a onclick='wrapperScroll("-300")' id="sectionother">
+                        <li>
                             <p>Otros Proyectos</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a onclick='wrapperScroll("-400")'>
+                        </li>
+                    </a>
+
+
+                    <a onclick='wrapperScroll("-400")' id="sectionskills">
+                        <li>
                             <p>Habilidades</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a onclick='wrapperScroll("-500")'>
+                        </li>
+                    </a>
+
+
+                    <a onclick='wrapperScroll("-500")' id="sectioncontact">
+                        <li>
                             <p>Contacto</p>
-                        </a>
-                    </li>
+                        </li>
+                    </a>
+
                 </ul>
 
                 <div class="navclose" id="navclose">
@@ -66,9 +78,18 @@
         </nav>
     </header>
     <main>
+
+        <div class="margindots">
+            <span class="dot" id="dothome" onclick='wrapperScroll("0")'></span>
+            <span class="dot" id="dotabout" onclick='wrapperScroll("-100")'></span>
+            <span class="dot" id="dotweb" onclick='wrapperScroll("-200")'></span>
+            <span class="dot" id="dotother" onclick='wrapperScroll("-300")'></span>
+            <span class="dot" id="dotskills" onclick='wrapperScroll("-400")'></span>
+            <span class="dot" id="dotcontact" onclick='wrapperScroll("-500")'></span>
+        </div>
         <div class="wrapper" id="wrapper">
             <!--HOME-->
-            <section class="home" id="1">
+            <section class="home" id="home">
                 <div class="homeimgdiv">
                     <img src="res/logo/Logo agreg.png" alt="Logo AGReg" id="home">
                 </div>
@@ -88,7 +109,7 @@
 
             <!--ABOUT ME-->
 
-            <section class="aboutme" id="2">
+            <section class="aboutme" id="about">
                 <div class="aboutdata">
                     <h2 class="sectiontitle">Sobre mí</h2>
                     <p>Empecé a programar en 2021, a raiz de la pandemia tomé la decisión de cambiar de profesión y
@@ -109,7 +130,7 @@
 
             <!--WEB PROJECTS-->
 
-            <section class="webprojects" id="3">
+            <section class="webprojects" id="web">
 
                 <div class="sectiontitle">
                     <h2>Proyectos web</h2>
@@ -144,14 +165,15 @@
                         </div>
 
                         <div class="invisiblediv">
-                            <p>Práctica de clase centrada en gestionar gran cantidad de páginas con información diferente, dirigí el proyeto a aprender y practicar DOM</p>
+                            <p>Práctica de clase centrada en gestionar gran cantidad de páginas con información
+                                diferente, dirigí el proyeto a aprender y practicar DOM</p>
                             <a href="https://turismo-zamora.glitch.me" target="_blank">Visitar sitio &gt;</a>
                         </div>
                     </article>
             </section>
 
             <!--OTHER PROJECTS-->
-            <section class="otherprojects">
+            <section class="otherprojects" id="other">
                 <div class="sectiontitle">
                     <h2>Otros Proyectos</h2>
                 </div>
@@ -174,14 +196,15 @@
                         </div>
 
                         <div class="invisiblediv">
-                            <p>Videojuego arcade retro programado desde cero (físicas de las burbujas a parte), empezó siendo sólo unas pruebas sobre animación de movimiento</p>
+                            <p>Videojuego arcade retro programado desde cero (físicas de las burbujas a parte), empezó
+                                siendo sólo unas pruebas sobre animación de movimiento</p>
                             <a href="https://super-bob-spang.glitch.me" target="_blank">Ver proyecto &gt;</a>
                         </div>
                     </article>
             </section>
 
             <!--SKILLS-->
-            <section class="skills" id="5">
+            <section class="skills" id="contact">
                 <div class="sectiontitle">
                     <h2>Habilidades</h2>
                 </div>

@@ -24,6 +24,7 @@ html {
     transition: .3s;
     width: fit-content;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -76,7 +77,7 @@ h4 {
     --font-color: #f2ffb9;
     --font-color2: #000;
 
-    --shade: #0000009c;
+    --shade: #00000086;
 
     --primary-color: #8b0085;
     --secondary-color: #22009d;
@@ -93,7 +94,7 @@ h4 {
     --font-color: #000;
     --font-color2: #fff;
 
-    --shade: #fde7ffa9;
+    --shade: #ffffffa9;
 
     --primary-color: #b96eff;
     --secondary-color: #ff9900;
@@ -118,19 +119,19 @@ img {
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-main{
+main {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.wrapper{
+.wrapper {
     height: 100%;
     width: 100%;
     transition: all 1.4s ease;
@@ -145,11 +146,11 @@ section {
     justify-content: center;
 }
 
-.sectiontitle{
+.sectiontitle {
     margin-bottom: 5vh;
 }
 
-.background{
+.background {
     position: absolute;
     top: 0;
     width: 100%;
@@ -198,6 +199,7 @@ header>nav>.navM>.navclose {
 
 header>nav>.navM {
     width: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -205,20 +207,31 @@ header>nav>.navM {
 
 header>nav>.navM>ul {
     width: 90%;
+    height: 100%;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     column-gap: 0.5rem;
     font-weight: 500;
     font-size: 1.3em;
 }
 
-header>nav>.navM>ul>li {
+header>nav>.navM>ul>a {
     height: 100%;
+    width: 15%;
+    z-index: 100;
+    cursor: pointer;
 }
 
-header>nav>.navM>ul>li:hover {
-    background-color: var(--shade);
+header>nav>.navM>ul>a>li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header>nav>.navM>ul>a:hover,
+header>nav>.navM>ul>a.active {
+    background-color: var(--color-accent);
+    transition: 0.5s ease-out;
 }
 
 header>nav>.iconsmargin {
@@ -266,6 +279,43 @@ header>nav>.iconsmargin>.ducklogo {
 /* Show menu */
 .show-menu {
     top: 0;
+}
+
+/*DOTS*/
+
+.margindots {
+    position: fixed;
+    margin: auto;
+    background-color: var(--shade);
+    display: flex;
+    flex-direction: column;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    z-index: 99;
+    transition: 0.5s;
+    border-radius: 25px 0 0 25px;
+}
+
+.margindots:hover{
+    right: 0;
+}
+
+.margindots>.dot {
+    height: 15px;
+    width: 15px;
+    margin: 10px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.margindots>.dot:hover,
+.margindots>.dot.marked {
+    scale: 1.5;
 }
 
 /*HOME*/
@@ -373,12 +423,12 @@ header>nav>.iconsmargin>.ducklogo {
 
 /*OTHER PROJECTS*/
 
-.otherprojects{
+.otherprojects {
     height: 100%;
     overflow: hidden;
 }
 
-.otherprojects>.projectscontainer{
+.otherprojects>.projectscontainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -387,7 +437,7 @@ header>nav>.iconsmargin>.ducklogo {
     overflow-y: hidden;
 }
 
-.otherprojects>.projectscontainer>article{
+.otherprojects>.projectscontainer>article {
     position: relative;
 }
 
@@ -417,12 +467,13 @@ header>nav>.iconsmargin>.ducklogo {
     opacity: 1;
 }
 
-.otherprojects>.projectscontainer>article>.visiblediv>img{
+.otherprojects>.projectscontainer>article>.visiblediv>img {
     width: 500px;
     height: 300px;
 }
+
 /*SKILLS*/
-.skills{
+.skills {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -431,19 +482,19 @@ header>nav>.iconsmargin>.ducklogo {
 .skills>.gridskills {
     background-color: var(--primary-color);
     border-radius: 5px;
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 1fr;
     padding: 10px;
 }
 
-.skills>.gridskills>.skillsitem{
+.skills>.gridskills>.skillsitem {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.skills>.gridskills>.skillsitem>img{
+.skills>.gridskills>.skillsitem>img {
     width: 100px;
 }
 
@@ -471,7 +522,7 @@ header>nav>.iconsmargin>.ducklogo {
     transition: 0.7s;
 }
 
-.contact>.socialmedialinks>a>.socialmediaitem:hover{
+.contact>.socialmedialinks>a>.socialmediaitem:hover {
     transform: scale(1.1);
 }
 
@@ -500,3 +551,5 @@ footer {
 footer>img {
     width: 50px;
 }
+
+@media screen and (min-width: 720px) and (max-width: 960px) {}
