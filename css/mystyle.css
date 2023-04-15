@@ -279,8 +279,7 @@ header>nav>.navM>ul>a.active {
 }
 
 header>nav>.iconsmargin {
-    position: absolute;
-    right: 5px;
+    margin-right: 2em;
     display: flex;
 }
 
