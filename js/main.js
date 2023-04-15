@@ -150,7 +150,6 @@ Array.from(document.querySelectorAll('.sectiontitle')).forEach(element => {
             if(entry.isIntersecting){
                 entry.target.style.animation  = "write 3s";
                 entry.target.style.opacity  = "1";
-                
             }
         })
     })
