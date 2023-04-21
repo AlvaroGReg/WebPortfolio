@@ -1,104 +1,81 @@
+var myDocument = document;
 /*menu*/
-const navMenu = document.getElementById('navM'),
-    navToggle = document.getElementById('navtoggle'),
-    navClose = document.getElementById('navclose');
-
+var navMenu = myDocument.getElementById('navM');
+var navToggle = myDocument.getElementById('navtoggle');
+var navClose = myDocument.getElementById('navclose');
 if (navToggle) {
-    navToggle.addEventListener('click', () => {
+    navToggle.addEventListener('click', function () {
         navMenu.classList.add('show-menu');
-    })
+    });
 }
-
 if (navClose) {
-    navClose.addEventListener('click', () => {
+    navClose.addEventListener('click', function () {
         navMenu.classList.remove('show-menu');
-    })
+    });
 }
-
 //THEMES
-
-const themeChange = document.getElementById('light-mode')
-
-themeChange.addEventListener('click', toggleTheme)
-
-// function to set a given theme/color-scheme
-
-function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-}
-
+var themeChange = myDocument.getElementById('light-mode');
 // function to toggle between light and dark theme
-
-function toggleTheme() {
+var toggleTheme = function () {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-light');
-    } else {
+    }
+    else {
         setTheme('theme-dark');
     }
-}
+};
+// function to set a given theme/color-scheme
+var setTheme = function (themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+};
 // Immediately invoked function to set the theme on initial load
 (function () {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-dark');
-    } else {
+    }
+    else {
         setTheme('theme-light');
     }
 })();
-
+themeChange.addEventListener('click', toggleTheme);
 // SCROLL FIXES IN SECTIONS//
-
-let scrolling = 0;
-let scrollFlag = 1;
-
+var scrolling = 0;
+var scrollFlag = 1;
 window.addEventListener("wheel", function (event) {
     if (scrollFlag === 1) {
-        setTimeout(() => {
-            scrollEvent(event)
+        setTimeout(function () {
+            scrollEvent(event);
             scrollFlag = 1;
-        }, 500)
+        }, 500);
         scrollFlag = 0;
     }
 });
-
-function scrollEvent(event) {
-
+var scrollEvent = function (event) {
     if (event.deltaY < 0 && scrolling < 0) {
-        scrolling = parseInt(scrolling) + 100;
-    } else if (event.deltaY > 0 && scrolling > -500) {
+        scrolling += 100;
+    }
+    else if (event.deltaY > 0 && scrolling > -500) {
         scrolling -= 100;
     }
     wrapperScroll(scrolling);
-}
-
+};
 function wrapperScroll(sectionPosition) {
- 
     scrolling = sectionPosition;
-    document.getElementById(
-        "wrapper"
-    ).style.transform = 'translateY(' + sectionPosition + 'vh)';
-
+    myDocument.getElementById("wrapper").style.transform = 'translateY(' + sectionPosition + 'vh)';
     changeActive(sectionPosition);
 }
-
 //SCROLL ACTIVES NAVBAR
-
-
-function changeActive(position) {
-
-    let menu = document.querySelectorAll("header nav ul a");
-    let dots = document.querySelectorAll("main div span");
-
-    menu.forEach(element => {
+var changeActive = function (position) {
+    var menu = myDocument.querySelectorAll("header nav ul a");
+    var dots = myDocument.querySelectorAll("main div span");
+    menu.forEach(function (element) {
         element.classList.remove('active');
     });
-
-    dots.forEach(element => {
+    dots.forEach(function (element) {
         element.classList.remove('marked');
     });
-
-    switch (parseInt(position)) {
-
+    switch (position) {
         case 0:
             document.getElementById("sectionhome").classList.add('active');
             document.getElementById("dothome").classList.add('marked');
@@ -124,34 +101,30 @@ function changeActive(position) {
             document.getElementById("dotcontact").classList.add('marked');
             break;
     }
-}
-
+};
 //ANIMATION ON SCROLL
-
 // Make buttons visible
-Array.from(document.querySelectorAll('.button')).forEach(element => {
-
-    const observer = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
+var buttonsList = myDocument.querySelectorAll('.button');
+buttonsList.forEach(function (element) {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
                 entry.target.classList.add('visibleanimation');
             }
-        })
-    })
+        });
+    });
     observer.observe(element);
 });
-
 //Section titles
-
-Array.from(document.querySelectorAll('.sectiontitle')).forEach(element => {
-
-    const observer = new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-            if(entry.isIntersecting){
-                entry.target.style.animation  = "write 3s";
-                entry.target.style.opacity  = "1";
+var titlesList = myDocument.querySelectorAll('.sectiontitle');
+titlesList.forEach(function (elemento) {
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('animation3s');
+                entrada.target.classList.add('opacity1');
             }
-        })
-    })
-    observer.observe(element);
+        });
+    });
+    observer.observe(elemento);
 });
