@@ -2,7 +2,7 @@
   "name": "chidoweb",
   "version": "1.0.0",
   "description": "Web portfolio trying to use best practices ive learned and show properly all my projects.",
-  "main": "./public/js/index.js",
+  "main": "js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server public"
@@ -17,7 +17,9 @@
     "url": "https://github.com/AlvaroGReg/web.animationtest.js/issues"
   },
   "homepage": "https://github.com/AlvaroGReg/web.animationtest.js#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.18.2"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "eslint": "^8.38.0",
