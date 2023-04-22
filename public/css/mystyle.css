@@ -554,13 +554,6 @@ header>nav>.iconsmargin>.ducklogo {
     height: 45px;
 }
 
-.contact>.maildiv>form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact>.maildiv>form>textarea {}
-
 /*FOOTER*/
 
 footer {
