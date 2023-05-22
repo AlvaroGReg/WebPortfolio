@@ -53,7 +53,7 @@ window.addEventListener("wheel", function (event) {
 });
 var scrollEvent = function (event) {
     if (event.deltaY < 0 && scrolling < 0) {
-        scrolling += 100;
+        scrolling += parseInt(100);
     }
     else if (event.deltaY > 0 && scrolling > -500) {
         scrolling -= 100;
@@ -75,7 +75,7 @@ var changeActive = function (position) {
     dots.forEach(function (element) {
         element.classList.remove('marked');
     });
-    switch (position) {
+    switch (parseInt(position)) {
         case 0:
             document.getElementById("sectionhome").classList.add('active');
             document.getElementById("dothome").classList.add('marked');
