@@ -398,6 +398,7 @@ header>nav>.iconsmargin>.ducklogo {
 }
 
 .home>.homeimgdiv>img {
+    max-width: 420px;
     width: 80%;
 }
 
