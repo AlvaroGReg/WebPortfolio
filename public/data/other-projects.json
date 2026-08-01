@@ -1,0 +1,21 @@
+{
+    "sectionTitle": "Otros Proyectos",
+    "items": [
+        {
+            "title": "Pokédex",
+            "description": "Proyecto realizado con el objetivo de probar consultas a APIs externas en JavaScript.",
+            "url": "https://web-pokedex.glitch.me",
+            "image": "res/other/img-pokedex.png",
+            "alt": "Web Pokédex",
+            "linkText": "Ver proyecto"
+        },
+        {
+            "title": "Super Bob Spang",
+            "description": "Videojuego arcade retro programado desde cero con físicas de burbujas y animaciones propias.",
+            "url": "https://super-bob-spang.glitch.me",
+            "image": "res/other/img-bobspang.png",
+            "alt": "Project capture",
+            "linkText": "Ver proyecto"
+        }
+    ]
+}

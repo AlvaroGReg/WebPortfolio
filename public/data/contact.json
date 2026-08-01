@@ -1,0 +1,26 @@
+{
+    "sectionTitle": "Contacto",
+    "items": [
+        {
+            "name": "Mail",
+            "description": "Escríbeme por correo",
+            "url": "mailto:alvaro.gracia.reg@gmail.com",
+            "icon": "res/logo/social/logo mail.png",
+            "alt": "Correo electrónico"
+        },
+        {
+            "name": "Telegram",
+            "description": "Habla conmigo por Telegram",
+            "url": "https://t.me/alvaro_lernek",
+            "icon": "res/logo/social/Telegram_logo.png",
+            "alt": "Telegram"
+        },
+        {
+            "name": "LinkedIn",
+            "description": "Conecta conmigo en LinkedIn",
+            "url": "https://www.linkedin.com/in/%C3%A1lvaro-gracia-reguil%C3%B3n-a2850114a/",
+            "icon": "res/logo/social/linkedin.png",
+            "alt": "LinkedIn"
+        }
+    ]
+}

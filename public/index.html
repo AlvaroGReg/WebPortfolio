@@ -20,45 +20,37 @@
             </div>
             <div class="navM" id="navM">
                 <ul>
-
                     <a onclick='wrapperScroll(0)' id="sectionhome" class="active">
                         <li>
                             <p>Inicio</p>
                         </li>
                     </a>
-
                     <a onclick='wrapperScroll(-100)' id="sectionabout">
                         <li>
                             <p>Sobre mí</p>
                         </li>
                     </a>
-
                     <a onclick='wrapperScroll(-200)' id="sectionweb">
                         <li>
                             <p>Web</p>
                         </li>
                     </a>
-
                     <a onclick='wrapperScroll(-300)' id="sectionother">
                         <li>
                             <p>Otros</p>
                         </li>
                     </a>
-
                     <a onclick='wrapperScroll(-400)' id="sectionskills">
                         <li>
                             <p>Habilidades</p>
                         </li>
                     </a>
-
                     <a onclick='wrapperScroll(-500)' id="sectioncontact">
                         <li>
                             <p>Contacto</p>
                         </li>
                     </a>
-
                 </ul>
-
                 <div class="navclose" id="navclose">
                     <i class="bx bx-x"></i>
                 </div>
@@ -72,10 +64,8 @@
             </div>
         </nav>
     </header>
-
     <!--MAIN-->
     <main>
-
         <div class="margindots">
             <span class="dot marked" id="dothome" onclick='wrapperScroll("0")'></span>
             <span class="dot" id="dotabout" onclick='wrapperScroll("-100")'></span>
@@ -93,7 +83,8 @@
                 <div class="hometxtdiv">
                     <div class="homedata">
                         <div>
-                        <h1 class="sectiontitle">AGReg</h1></div>
+                            <h1 class="sectiontitle">AGReg</h1>
+                        </div>
                         <p>Programador web y android.</p>
                     </div>
                     <div class="homebuttons">
@@ -103,75 +94,30 @@
                 </div>
 
             </section>
-
             <!--ABOUT ME-->
-
             <section class="aboutme" id="about">
-                <div class="aboutdata"><div>
-                    <h2 class="sectiontitle">Sobre mí</h2></div>
-                    <p>Programador junior, centrado en el desarrollo front-end usando Angular desde que empecé en mi actual trabajo.
-                        <br/>
-                        Di mis primeros pasos programando en Android con Java y Kotlin. He hecho pequeños backends en NestJs y Spring Boot.
-                        Empecé en web usando React y SCSS, aunque actualmente me centro en Angular con backends hechos por mis compañeros,
+                <div class="aboutdata">
+                    <div>
+                        <h2 class="sectiontitle">Sobre mí</h2>
+                    </div>
+                    <p>Programador junior, centrado en el desarrollo front-end usando Angular desde que empecé en mi
+                        actual trabajo.
+                        <br />
+                        Di mis primeros pasos programando en Android con Java y Kotlin. He hecho pequeños backends en
+                        NestJs y Spring Boot.
+                        Empecé en web usando React y SCSS, aunque actualmente me centro en Angular con backends hechos
+                        por mis compañeros,
                         apoyándome en conocimientos de Docker, Swagger y Git para el trabajo en equipo.
                     </p>
                     <a class="button" onclick='wrapperScroll("-500")'>Contactar</a>
                 </div>
             </section>
-
             <!--WEB PROJECTS-->
-
             <section class="webprojects" id="web">
-
                 <div>
                     <h2 class="sectiontitle">Proyectos web</h2>
                 </div>
-
-                <div class="articlescontainer">
-                    <article class="article1">
-                        <div class="visiblediv">
-                            <img src="res/webprojects/lakes.png" alt="Lagos Glaciares">
-                        </div>
-
-                        <div class="invisiblediv">
-                            <p>Web de tusimo centrada en explorar Bootstrap, maquetación y css avanzado</p>
-                            <a href="https://glaciallakes.glitch.me" target="_blank">Visitar sitio &gt;</a>
-                        </div>
-                    </article>
-
-                    <article class="article2">
-                        <div class="visiblediv">
-                            <img src="res/webprojects/casarural.png" alt="Portada casa rural">
-                        </div>
-
-                        <div class="invisiblediv">
-                            <p>Lading page por encargo para una casa rural. Destacar la galería y los social-links</p>
-                            <a href="https://casaruraltrefacio.glitch.me/" target="_blank">Visitar sitio &gt;</a>
-                        </div>
-                    </article>
-
-                    <article class="article3">
-                        <div class="visiblediv">
-                            <img src="res/webprojects/zamora.png" alt="webfront">
-                        </div>
-
-                        <div class="invisiblediv">
-                            <p>Práctica de clase centrada en gestionar gran cantidad de páginas con información
-                                diferente, dirigí el proyeto a aprender y practicar DOM</p>
-                            <a href="https://turismo-zamora.glitch.me" target="_blank">Visitar sitio &gt;</a>
-                        </div>
-                    </article>
-                    <article class="article4">
-                        <div class="visiblediv">
-                            <img src="res/webprojects/croissants.png" alt="webfront">
-                        </div>
-
-                    <div class="invisiblediv">
-                        <p>Práctica sobre responsive webs tratando de imitar las landing page más simples para adaptar su visualización.</p>
-                        <a href="https://sms-croissants.glitch.me" target="_blank">Visitar sitio &gt;</a>
-                    </div>
-                </article>
-              
+                <div class="articlescontainer" id="web-projects-container"></div>
             </section>
 
             <!--OTHER PROJECTS-->
@@ -179,119 +125,21 @@
                 <div>
                     <h2 class="sectiontitle">Otros Proyectos</h2>
                 </div>
-                <div class="projectscontainer">
-                    <article>
-                        <div class="visiblediv">
-                            <img src="res/other/img-pokedex.png" alt="Web Pokédex">
-                        </div>
-
-                        <div class="invisiblediv">
-                            <p>Proyecto realizado con el objetivo de probar las consultas a APIs externas en Js. Primer
-                                proyecto en el que apliqué css.</p>
-                            <a href="https://web-pokedex.glitch.me" target="_blank">Ver proyecto &gt;</a>
-                        </div>
-                    </article>
-
-                    <article>
-                        <div class="visiblediv">
-                            <img src="res/other/img-bobspang.png" alt="project capture">
-                        </div>
-
-                        <div class="invisiblediv">
-                            <p>Videojuego arcade retro programado desde cero (físicas de las burbujas a parte), empezó
-                                siendo sólo unas pruebas sobre animación de movimiento</p>
-                            <a href="https://super-bob-spang.glitch.me" target="_blank">Ver proyecto &gt;</a>
-                        </div>
-                    </article>
+                <div class="projectscontainer" id="other-projects-container"></div>
             </section>
-
             <!--SKILLS-->
-            <section class="skills" id="contact">
+            <section class="skills" id="skills">
                 <div>
                     <h2 class="sectiontitle">Habilidades</h2>
                 </div>
-
-                <div class="gridskills">
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-java.png" alt="Java">
-                        <p>Java</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-kotlin.png" alt="Kotlin">
-                        <p>Kotlin</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-js.png" alt="JavaScript">
-                        <p>JavaScript</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-angular.png" alt="Angular">
-                        <p>Angular</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-css.avif.png" alt="CSS">
-                        <p>CSS</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-git.png" alt="Git">
-                        <p>Git</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-html.png" alt="HTML">
-                        <p>HTML</p>
-                    </div>
-
-                    <div class="skillsitem">
-                        <img src="res/logo/skills/logo-vsc.png" alt="Visual Studio Code">
-                        <p>VSC</p>
-                    </div>
-                </div>
+                <div class="gridskills" id="skills-container"></div>
             </section>
-
             <!--CONTACT-->
-            <section class="contact" id="6">
-
+            <section class="contact" id="contact">
                 <div>
                     <h2 class="sectiontitle">Contacto</h2>
                 </div>
-
-                <div class="socialmedialinks">
-
-                    <a href="mailto: alvaro.gracia.reg@gmail.com" target="_blank">
-                        <div class="socialmediaitem">
-                            <img src="res/logo/social/logo mail.png" alt="socialmediaimg">
-                            <p>Mail</p>
-                        </div>
-                    </a>
-
-<!--                     <a href="https://github.com/AlvaroGReg" target="_blank">
-                        <div class="socialmediaitem">
-                            <img src="res/logo/social/github.png" alt="socialmediaimg">
-                            <p>Github</p>
-                        </div>
-                    </a> -->
-
-                    <a href="https://t.me/alvaro_lernek" target="_blank">
-                        <div class="socialmediaitem">
-                            <img src="res/logo/social/Telegram_logo.png" alt="socialmediaimg">
-                            <p>Telegram</p>
-                        </div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/%C3%A1lvaro-gracia-reguil%C3%B3n-a2850114a/" target="_blank">
-                        <div class="socialmediaitem">
-                            <img src="res/logo/social/linkedin.png" alt="socialmediaimg">
-                            <p>LinkdIn</p>
-                        </div>
-                    </a>
-
-                </div>
+                <div class="socialmedialinks" id="contact-container"></div>
             </section>
         </div>
     </main>

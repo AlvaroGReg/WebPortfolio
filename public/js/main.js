@@ -39,6 +39,116 @@ var setTheme = function (themeName) {
     }
 })();
 themeChange.addEventListener('click', toggleTheme);
+
+var renderWebProjects = function (data) {
+    var container = document.getElementById('web-projects-container');
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = data.items.map(function (item, index) {
+        return "<article class=\"article" + (index + 1) + "\">\n" +
+            "<div class=\"visiblediv\">\n" +
+            "<img src=\"" + item.image + "\" alt=\"" + item.alt + "\">\n" +
+            "</div>\n" +
+            "<div class=\"invisiblediv\">\n" +
+            "<p>" + item.description + "</p>\n" +
+            "<a href=\"" + item.url + "\" target=\"_blank\">" + item.linkText + " &gt;</a>\n" +
+            "</div>\n" +
+            "</article>";
+    }).join('');
+
+    var sectionTitle = container.closest('section').querySelector('.sectiontitle');
+    if (sectionTitle) {
+        sectionTitle.textContent = data.sectionTitle;
+    }
+};
+
+var renderOtherProjects = function (data) {
+    var container = document.getElementById('other-projects-container');
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = data.items.map(function (item) {
+        return "<article>\n" +
+            "<div class=\"visiblediv\">\n" +
+            "<img src=\"" + item.image + "\" alt=\"" + item.alt + "\">\n" +
+            "</div>\n" +
+            "<div class=\"invisiblediv\">\n" +
+            "<p>" + item.description + "</p>\n" +
+            "<a href=\"" + item.url + "\" target=\"_blank\">" + item.linkText + " &gt;</a>\n" +
+            "</div>\n" +
+            "</article>";
+    }).join('');
+
+    var sectionTitle = container.closest('section').querySelector('.sectiontitle');
+    if (sectionTitle) {
+        sectionTitle.textContent = data.sectionTitle;
+    }
+};
+
+var renderSkills = function (data) {
+    var container = document.getElementById('skills-container');
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = data.items.map(function (item) {
+        return "<div class=\"skillsitem\">\n" +
+            "<img src=\"" + item.icon + "\" alt=\"" + item.alt + "\">\n" +
+            "<p>" + item.name + "</p>\n" +
+            "</div>";
+    }).join('');
+
+    var sectionTitle = container.closest('section').querySelector('.sectiontitle');
+    if (sectionTitle) {
+        sectionTitle.textContent = data.sectionTitle;
+    }
+};
+
+var renderContact = function (data) {
+    var container = document.getElementById('contact-container');
+    if (!container) {
+        return;
+    }
+
+    container.innerHTML = data.items.map(function (item) {
+        return "<a href=\"" + item.url + "\" target=\"_blank\">\n" +
+            "<div class=\"socialmediaitem\">\n" +
+            "<img src=\"" + item.icon + "\" alt=\"" + item.alt + "\">\n" +
+            "<p>" + item.name + "</p>\n" +
+            "</div>\n" +
+            "</a>";
+    }).join('');
+
+    var sectionTitle = container.closest('section').querySelector('.sectiontitle');
+    if (sectionTitle) {
+        sectionTitle.textContent = data.sectionTitle;
+    }
+};
+
+var loadJsonData = function (url, renderFunction) {
+    fetch(url)
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error('Unable to load ' + url);
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            renderFunction(data);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+};
+
+loadJsonData('data/web-projects.json', renderWebProjects);
+loadJsonData('data/other-projects.json', renderOtherProjects);
+loadJsonData('data/skills.json', renderSkills);
+loadJsonData('data/contact.json', renderContact);
+
 // SCROLL FIXES IN SECTIONS//
 var scrolling = 0;
 var scrollFlag = 1;

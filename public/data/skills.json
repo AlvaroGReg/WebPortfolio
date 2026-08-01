@@ -1,0 +1,45 @@
+{
+    "sectionTitle": "Habilidades",
+    "items": [
+        {
+            "name": "Java",
+            "icon": "res/logo/skills/logo-java.png",
+            "alt": "Java"
+        },
+        {
+            "name": "Kotlin",
+            "icon": "res/logo/skills/logo-kotlin.png",
+            "alt": "Kotlin"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "res/logo/skills/logo-js.png",
+            "alt": "JavaScript"
+        },
+        {
+            "name": "Angular",
+            "icon": "res/logo/skills/logo-angular.png",
+            "alt": "Angular"
+        },
+        {
+            "name": "CSS",
+            "icon": "res/logo/skills/logo-css.avif.png",
+            "alt": "CSS"
+        },
+        {
+            "name": "Git",
+            "icon": "res/logo/skills/logo-git.png",
+            "alt": "Git"
+        },
+        {
+            "name": "HTML",
+            "icon": "res/logo/skills/logo-html.png",
+            "alt": "HTML"
+        },
+        {
+            "name": "VSC",
+            "icon": "res/logo/skills/logo-vsc.png",
+            "alt": "Visual Studio Code"
+        }
+    ]
+}

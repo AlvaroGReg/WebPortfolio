@@ -1,0 +1,37 @@
+{
+    "sectionTitle": "Proyectos web",
+    "items": [
+        {
+            "title": "Lagos Glaciares",
+            "description": "Web de turismo centrada en explorar Bootstrap, maquetación y CSS avanzado.",
+            "url": "https://glaciallakes.glitch.me",
+            "image": "res/webprojects/lakes.png",
+            "alt": "Lagos Glaciares",
+            "linkText": "Visitar sitio"
+        },
+        {
+            "title": "Casa Rural Trefacio",
+            "description": "Landing page por encargo para una casa rural, destacando la galería y los enlaces sociales.",
+            "url": "https://casaruraltrefacio.glitch.me/",
+            "image": "res/webprojects/casarural.png",
+            "alt": "Portada casa rural",
+            "linkText": "Visitar sitio"
+        },
+        {
+            "title": "Turismo Zamora",
+            "description": "Práctica de clase centrada en gestionar gran cantidad de páginas con información diferente.",
+            "url": "https://turismo-zamora.glitch.me",
+            "image": "res/webprojects/zamora.png",
+            "alt": "Web de turismo",
+            "linkText": "Visitar sitio"
+        },
+        {
+            "title": "Croissants",
+            "description": "Práctica sobre responsive webs tratando de imitar landing pages simples para adaptar su visualización.",
+            "url": "https://sms-croissants.glitch.me",
+            "image": "res/webprojects/croissants.png",
+            "alt": "Croissants",
+            "linkText": "Visitar sitio"
+        }
+    ]
+}
