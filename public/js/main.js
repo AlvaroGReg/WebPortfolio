@@ -152,18 +152,75 @@ loadJsonData('data/contact.json', renderContact);
 // SCROLL FIXES IN SECTIONS//
 var scrolling = 0;
 var scrollFlag = 1;
-window.addEventListener("wheel", function (event) {
-    if (scrollFlag === 1) {
-        setTimeout(function () {
-            scrollEvent(event);
-            scrollFlag = 1;
-        }, 500);
-        scrollFlag = 0;
+var sectionPositions = {
+    home: 0,
+    about: -100,
+    web: -200,
+    other: -300,
+    skills: -400,
+    contact: -500
+};
+var sectionIdByPosition = {
+    0: 'home',
+    '-100': 'about',
+    '-200': 'web',
+    '-300': 'other',
+    '-400': 'skills',
+    '-500': 'contact'
+};
+var isMobileViewport = function () {
+    return window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+};
+var getSectionIdFromPosition = function (position) {
+    var normalizedPosition = String(position);
+    return sectionIdByPosition[normalizedPosition] || 'home';
+};
+var updateActiveState = function (sectionId) {
+    var menu = myDocument.querySelectorAll("header nav ul a");
+    var dots = myDocument.querySelectorAll("main .margindots .dot");
+    menu.forEach(function (element) {
+        element.classList.remove('active');
+    });
+    dots.forEach(function (element) {
+        element.classList.remove('marked');
+    });
+
+    var menuTarget = document.getElementById("section" + sectionId);
+    var dotTarget = document.getElementById("dot" + sectionId);
+
+    if (menuTarget) {
+        menuTarget.classList.add('active');
     }
-});
+    if (dotTarget) {
+        dotTarget.classList.add('marked');
+    }
+};
+var changeActive = function (position) {
+    var sectionId = getSectionIdFromPosition(position);
+    updateActiveState(sectionId);
+};
+var scrollToSection = function (sectionId) {
+    var targetSection = document.getElementById(sectionId);
+    if (!targetSection) {
+        return;
+    }
+
+    if (isMobileViewport()) {
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateActiveState(sectionId);
+        return;
+    }
+
+    var targetPosition = sectionPositions[sectionId];
+    if (targetPosition === undefined) {
+        return;
+    }
+
+    wrapperScroll(targetPosition);
+};
 var scrollEvent = function (event) {
     if (event.deltaY < 0 && scrolling < 0) {
-        scrolling += parseInt(100);
+        scrolling += 100;
     }
     else if (event.deltaY > 0 && scrolling > -500) {
         scrolling -= 100;
@@ -171,47 +228,50 @@ var scrollEvent = function (event) {
     wrapperScroll(scrolling);
 };
 function wrapperScroll(sectionPosition) {
-    scrolling = sectionPosition;
-    myDocument.getElementById("wrapper").style.transform = 'translateY(' + sectionPosition + 'vh)';
-    changeActive(sectionPosition);
-}
-//SCROLL ACTIVES NAVBAR
-var changeActive = function (position) {
-    var menu = myDocument.querySelectorAll("header nav ul a");
-    var dots = myDocument.querySelectorAll("main div span");
-    menu.forEach(function (element) {
-        element.classList.remove('active');
-    });
-    dots.forEach(function (element) {
-        element.classList.remove('marked');
-    });
-    switch (parseInt(position)) {
-        case 0:
-            document.getElementById("sectionhome").classList.add('active');
-            document.getElementById("dothome").classList.add('marked');
-            break;
-        case -100:
-            document.getElementById("sectionabout").classList.add('active');
-            document.getElementById("dotabout").classList.add('marked');
-            break;
-        case -200:
-            document.getElementById("sectionweb").classList.add('active');
-            document.getElementById("dotweb").classList.add('marked');
-            break;
-        case -300:
-            document.getElementById("sectionother").classList.add('active');
-            document.getElementById("dotother").classList.add('marked');
-            break;
-        case -400:
-            document.getElementById("sectionskills").classList.add('active');
-            document.getElementById("dotskills").classList.add('marked');
-            break;
-        case -500:
-            document.getElementById("sectioncontact").classList.add('active');
-            document.getElementById("dotcontact").classList.add('marked');
-            break;
+    var parsedPosition = parseInt(sectionPosition, 10);
+    if (isMobileViewport()) {
+        var mobileSectionId = getSectionIdFromPosition(parsedPosition);
+        scrollToSection(mobileSectionId);
+        return;
     }
-};
+
+    scrolling = parsedPosition;
+    var wrapper = myDocument.getElementById("wrapper");
+    if (wrapper) {
+        wrapper.style.transform = 'translateY(' + parsedPosition + 'vh)';
+    }
+    changeActive(parsedPosition);
+}
+window.addEventListener('wheel', function (event) {
+    if (isMobileViewport()) {
+        return;
+    }
+
+    if (scrollFlag === 1) {
+        setTimeout(function () {
+            scrollEvent(event);
+            scrollFlag = 1;
+        }, 500);
+        scrollFlag = 0;
+    }
+}, { passive: true });
+window.addEventListener('resize', function () {
+    if (isMobileViewport()) {
+        return;
+    }
+    wrapperScroll(scrolling);
+});
+var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            var sectionId = entry.target.id;
+            updateActiveState(sectionId);
+        }
+    });
+}, { threshold: 0.4 });
+document.querySelectorAll('main section').forEach(function (section) {
+    sectionObserver.observe(section);
+});
 //ANIMATION ON SCROLL
 // Make buttons visible
 var buttonsList = myDocument.querySelectorAll('.button');
