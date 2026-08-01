@@ -1,26 +1,26 @@
 {
-    "sectionTitle": "Contacto",
+    "sectionTitle": { "es": "Contacto", "en": "Contact" },
     "items": [
         {
-            "name": "Mail",
-            "description": "Escríbeme por correo",
+            "name": { "es": "Correo", "en": "Email" },
+            "description": { "es": "Escríbeme por correo", "en": "Email me" },
             "url": "mailto:alvaro.gracia.reg@gmail.com",
             "icon": "res/logo/social/logo mail.png",
-            "alt": "Correo electrónico"
+            "alt": { "es": "Correo electrónico", "en": "Email" }
         },
         {
-            "name": "Telegram",
-            "description": "Habla conmigo por Telegram",
+            "name": { "es": "Telegram", "en": "Telegram" },
+            "description": { "es": "Habla conmigo por Telegram", "en": "Chat with me on Telegram" },
             "url": "https://t.me/alvaro_lernek",
             "icon": "res/logo/social/Telegram_logo.png",
-            "alt": "Telegram"
+            "alt": { "es": "Telegram", "en": "Telegram" }
         },
         {
-            "name": "LinkedIn",
-            "description": "Conecta conmigo en LinkedIn",
+            "name": { "es": "LinkedIn", "en": "LinkedIn" },
+            "description": { "es": "Conecta conmigo en LinkedIn", "en": "Connect with me on LinkedIn" },
             "url": "https://www.linkedin.com/in/%C3%A1lvaro-gracia-reguil%C3%B3n-a2850114a/",
             "icon": "res/logo/social/linkedin.png",
-            "alt": "LinkedIn"
+            "alt": { "es": "LinkedIn", "en": "LinkedIn" }
         }
     ]
 }

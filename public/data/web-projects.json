@@ -1,37 +1,37 @@
 {
-    "sectionTitle": "Proyectos web",
+    "sectionTitle": { "es": "Proyectos web", "en": "Web projects" },
     "items": [
         {
-            "title": "Lagos Glaciares",
-            "description": "Web de turismo centrada en explorar Bootstrap, maquetación y CSS avanzado.",
+            "title": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
+            "description": { "es": "Web de turismo centrada en explorar Bootstrap, maquetación y CSS avanzado.", "en": "Tourism website focused on exploring Bootstrap, layout design and advanced CSS." },
             "url": "https://glaciallakes.glitch.me",
             "image": "res/webprojects/lakes.png",
-            "alt": "Lagos Glaciares",
-            "linkText": "Visitar sitio"
+            "alt": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
         },
         {
-            "title": "Casa Rural Trefacio",
-            "description": "Landing page por encargo para una casa rural, destacando la galería y los enlaces sociales.",
+            "title": { "es": "Casa Rural Trefacio", "en": "Trefacio Country House" },
+            "description": { "es": "Landing page por encargo para una casa rural, destacando la galería y los enlaces sociales.", "en": "Commissioned landing page for a country house, highlighting its gallery and social links." },
             "url": "https://casaruraltrefacio.glitch.me/",
             "image": "res/webprojects/casarural.png",
-            "alt": "Portada casa rural",
-            "linkText": "Visitar sitio"
+            "alt": { "es": "Portada casa rural", "en": "Country house cover" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
         },
         {
-            "title": "Turismo Zamora",
-            "description": "Práctica de clase centrada en gestionar gran cantidad de páginas con información diferente.",
+            "title": { "es": "Turismo Zamora", "en": "Zamora Tourism" },
+            "description": { "es": "Práctica de clase centrada en gestionar gran cantidad de páginas con información diferente.", "en": "Class project focused on managing a large number of pages with different information." },
             "url": "https://turismo-zamora.glitch.me",
             "image": "res/webprojects/zamora.png",
-            "alt": "Web de turismo",
-            "linkText": "Visitar sitio"
+            "alt": { "es": "Web de turismo", "en": "Tourism website" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
         },
         {
-            "title": "Croissants",
-            "description": "Práctica sobre responsive webs tratando de imitar landing pages simples para adaptar su visualización.",
+            "title": { "es": "Croissants", "en": "Croissants" },
+            "description": { "es": "Práctica sobre responsive webs tratando de imitar landing pages simples para adaptar su visualización.", "en": "Responsive web exercise imitating simple landing pages to adapt their layout." },
             "url": "https://sms-croissants.glitch.me",
             "image": "res/webprojects/croissants.png",
-            "alt": "Croissants",
-            "linkText": "Visitar sitio"
+            "alt": { "es": "Croissants", "en": "Croissants" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
         }
     ]
 }

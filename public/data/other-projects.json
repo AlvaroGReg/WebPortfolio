@@ -1,21 +1,21 @@
 {
-    "sectionTitle": "Otros Proyectos",
+    "sectionTitle": { "es": "Otros proyectos", "en": "Other projects" },
     "items": [
         {
-            "title": "Pokédex",
-            "description": "Proyecto realizado con el objetivo de probar consultas a APIs externas en JavaScript.",
+            "title": { "es": "Pokédex", "en": "Pokédex" },
+            "description": { "es": "Proyecto realizado con el objetivo de probar consultas a APIs externas en JavaScript.", "en": "Project created to test queries to external APIs in JavaScript." },
             "url": "https://web-pokedex.glitch.me",
             "image": "res/other/img-pokedex.png",
-            "alt": "Web Pokédex",
-            "linkText": "Ver proyecto"
+            "alt": { "es": "Web Pokédex", "en": "Pokédex website" },
+            "linkText": { "es": "Ver proyecto", "en": "View project" }
         },
         {
-            "title": "Super Bob Spang",
-            "description": "Videojuego arcade retro programado desde cero con físicas de burbujas y animaciones propias.",
+            "title": { "es": "Super Bob Spang", "en": "Super Bob Spang" },
+            "description": { "es": "Videojuego arcade retro programado desde cero con físicas de burbujas y animaciones propias.", "en": "Retro arcade game programmed from scratch, with bubble physics and custom animations." },
             "url": "https://super-bob-spang.glitch.me",
             "image": "res/other/img-bobspang.png",
-            "alt": "Project capture",
-            "linkText": "Ver proyecto"
+            "alt": { "es": "Captura del proyecto", "en": "Project screenshot" },
+            "linkText": { "es": "Ver proyecto", "en": "View project" }
         }
     ]
 }

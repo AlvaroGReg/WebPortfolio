@@ -1,4 +1,5 @@
 var myDocument = document;
+var i18n = window.i18n;
 /*menu*/
 var navMenu = myDocument.getElementById('navM');
 var navToggle = myDocument.getElementById('navtoggle');
@@ -38,13 +39,17 @@ var setTheme = function (themeName) {
         setTheme('theme-light');
     }
 })();
-themeChange.addEventListener('click', toggleTheme);
+if (themeChange) {
+    themeChange.addEventListener('click', toggleTheme);
+}
 
 var renderWebProjects = function (data) {
     var container = document.getElementById('web-projects-container');
     if (!container) {
         return;
     }
+
+    data = i18n.localizeData(data);
 
     container.innerHTML = data.items.map(function (item, index) {
         return "<article class=\"article" + (index + 1) + "\">\n" +
@@ -70,6 +75,8 @@ var renderOtherProjects = function (data) {
         return;
     }
 
+    data = i18n.localizeData(data);
+
     container.innerHTML = data.items.map(function (item) {
         return "<article>\n" +
             "<div class=\"visiblediv\">\n" +
@@ -94,6 +101,8 @@ var renderSkills = function (data) {
         return;
     }
 
+    data = i18n.localizeData(data);
+
     container.innerHTML = data.items.map(function (item) {
         return "<div class=\"skillsitem\">\n" +
             "<img src=\"" + item.icon + "\" alt=\"" + item.alt + "\">\n" +
@@ -113,6 +122,8 @@ var renderContact = function (data) {
         return;
     }
 
+    data = i18n.localizeData(data);
+
     container.innerHTML = data.items.map(function (item) {
         return "<a href=\"" + item.url + "\" target=\"_blank\">\n" +
             "<div class=\"socialmediaitem\">\n" +
@@ -128,6 +139,7 @@ var renderContact = function (data) {
     }
 };
 
+var localizedDataSources = {};
 var loadJsonData = function (url, renderFunction) {
     fetch(url)
         .then(function (response) {
@@ -137,6 +149,10 @@ var loadJsonData = function (url, renderFunction) {
             return response.json();
         })
         .then(function (data) {
+            localizedDataSources[url] = {
+                data: data,
+                renderFunction: renderFunction
+            };
             renderFunction(data);
         })
         .catch(function (error) {
@@ -144,6 +160,13 @@ var loadJsonData = function (url, renderFunction) {
         });
 };
 
+var renderLocalizedData = function () {
+    Object.keys(localizedDataSources).forEach(function (url) {
+        var source = localizedDataSources[url];
+        source.renderFunction(source.data);
+    });
+};
+myDocument.addEventListener('languagechange', renderLocalizedData);
 loadJsonData('data/web-projects.json', renderWebProjects);
 loadJsonData('data/other-projects.json', renderOtherProjects);
 loadJsonData('data/skills.json', renderSkills);

@@ -22,32 +22,32 @@
                 <ul>
                     <a onclick='wrapperScroll(0)' id="sectionhome" class="active">
                         <li>
-                            <p>Inicio</p>
+                            <p data-i18n="nav.home">Inicio</p>
                         </li>
                     </a>
                     <a onclick='wrapperScroll(-100)' id="sectionabout">
                         <li>
-                            <p>Sobre mí</p>
+                            <p data-i18n="nav.about">Sobre mí</p>
                         </li>
                     </a>
                     <a onclick='wrapperScroll(-200)' id="sectionweb">
                         <li>
-                            <p>Web</p>
+                            <p data-i18n="nav.web">Web</p>
                         </li>
                     </a>
                     <a onclick='wrapperScroll(-300)' id="sectionother">
                         <li>
-                            <p>Otros</p>
+                            <p data-i18n="nav.other">Otros</p>
                         </li>
                     </a>
                     <a onclick='wrapperScroll(-400)' id="sectionskills">
                         <li>
-                            <p>Habilidades</p>
+                            <p data-i18n="nav.skills">Habilidades</p>
                         </li>
                     </a>
                     <a onclick='wrapperScroll(-500)' id="sectioncontact">
                         <li>
-                            <p>Contacto</p>
+                            <p data-i18n="nav.contact">Contacto</p>
                         </li>
                     </a>
                 </ul>
@@ -56,11 +56,16 @@
                 </div>
             </div>
             <div class="iconsmargin">
+                <label class="sr-only" for="language-select" data-i18n="language.label">Seleccionar idioma</label>
+                <select id="language-select" class="language-select" aria-label="Seleccionar idioma">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
                 <div class="lightmode" id="light-mode">
                     <i class="bx bx-sun"></i>
                 </div>
 
-                <img src="res/logo/logo-pato.png" class="ducklogo" alt="Duck logo">
+                <img src="res/logo/logo_pato-v2.png" class="ducklogo" alt="Logo de pato AGREG" data-i18n-alt="duckLogo">
             </div>
         </nav>
     </header>
@@ -85,11 +90,11 @@
                         <div>
                             <h1 class="sectiontitle">AGReg</h1>
                         </div>
-                        <p>Programador frontend.</p>
+                        <p data-i18n="home.role">Programador frontend.</p>
                     </div>
                     <div class="homebuttons">
-                        <a class="button" onclick='wrapperScroll("-200")'>Proyectos</a>
-                        <a class="button" onclick='wrapperScroll("-500")'>Contactar</a>
+                        <a class="button" onclick='wrapperScroll("-200")' data-i18n="home.projects">Proyectos</a>
+                        <a class="button" onclick='wrapperScroll("-500")' data-i18n="home.contact">Contactar</a>
                     </div>
                 </div>
             </section>
@@ -97,52 +102,45 @@
             <section class="aboutme" id="about">
                 <div class="aboutdata">
                     <div>
-                        <h2 class="sectiontitle">Sobre mí</h2>
+                        <h2 class="sectiontitle" data-i18n="about.title">Sobre mí</h2>
                     </div>
-                    <p>Soy un programador residente al norte de León, centrado en el frontend, como buen autodidacta
-                        tengo gran capacidad de adaptación y me mantengo aprendiendo cosas nuevas.
-                        <br />
-                        <br />
-                        Di mis primeros pasos programando en Android con Java y Kotlin. He hecho pequeños backends en
-                        Go, NestJs y Spring Boot.
-                        <br />
-                        Empecé en web por mi cuenta usando React y SCSS, tras eso estuve un año trabajando para Talento
-                        Solutions usando principalmente Angular y NestJs;
-                        apoyado en Docker, Swagger y Git para el trabajo en equipo.
-                        <br />
-                        <br />
-                        Actualmente trabajo en Integramedia Digital haciendo tiendas online en un stack híbrido de Vue y
-                        .Net y aplicaciones de uso interno en Brazor. También me he acostumbrado a manejar Azure y SQL
-                        desde que estoy aquí.
+                    <p data-i18n-html="about.description">Soy un programador residente al norte de León, centrado en el
+                        frontend, como buen autodidacta tengo gran capacidad de adaptación y me mantengo aprendiendo
+                        cosas nuevas.<br><br>Di mis primeros pasos programando en Android con Java y Kotlin. He hecho
+                        pequeños backends en Go, NestJs y Spring Boot.<br>Empecé en web por mi cuenta usando React y
+                        SCSS, tras eso estuve un año trabajando para Talento Solutions usando principalmente Angular y
+                        NestJs; apoyado en Docker, Swagger y Git para el trabajo en equipo.<br><br>Actualmente trabajo
+                        en Integramedia Digital haciendo tiendas online en un stack híbrido de Vue y .Net y aplicaciones
+                        de uso interno en Brazor. También me he acostumbrado a manejar Azure y SQL desde que estoy aquí.
                     </p>
-                    <a class="button" onclick='wrapperScroll("-500")'>Contactar</a>
+                    <a class="button" onclick='wrapperScroll("-500")' data-i18n="home.contact">Contactar</a>
                 </div>
             </section>
             <!--WEB PROJECTS-->
             <section class="webprojects" id="web">
                 <div>
-                    <h2 class="sectiontitle">Proyectos web</h2>
+                    <h2 class="sectiontitle" data-i18n="sections.web">Proyectos web</h2>
                 </div>
                 <div class="articlescontainer" id="web-projects-container"></div>
             </section>
             <!--OTHER PROJECTS-->
             <section class="otherprojects" id="other">
                 <div>
-                    <h2 class="sectiontitle">Otros Proyectos</h2>
+                    <h2 class="sectiontitle" data-i18n="sections.other">Otros proyectos</h2>
                 </div>
                 <div class="projectscontainer" id="other-projects-container"></div>
             </section>
             <!--SKILLS-->
             <section class="skills" id="skills">
                 <div>
-                    <h2 class="sectiontitle">Habilidades</h2>
+                    <h2 class="sectiontitle" data-i18n="sections.skills">Habilidades</h2>
                 </div>
                 <div class="gridskills" id="skills-container"></div>
             </section>
             <!--CONTACT-->
             <section class="contact" id="contact">
                 <div>
-                    <h2 class="sectiontitle">Contacto</h2>
+                    <h2 class="sectiontitle" data-i18n="sections.contact">Contacto</h2>
                 </div>
                 <div class="socialmedialinks" id="contact-container"></div>
             </section>
@@ -153,6 +151,7 @@
         <img src="res/logo/logo_letra-v2.png" alt="Logo AGREG">
     </footer>
 </body>
+<script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
 
 </html>

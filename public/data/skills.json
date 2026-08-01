@@ -1,20 +1,10 @@
 {
-    "sectionTitle": "Habilidades",
+    "sectionTitle": { "es": "Habilidades", "en": "Skills" },
     "items": [
         {
-            "name": "Java",
-            "icon": "res/logo/skills/logo-java.png",
-            "alt": "Java"
-        },
-        {
-            "name": "Kotlin",
-            "icon": "res/logo/skills/logo-kotlin.png",
-            "alt": "Kotlin"
-        },
-        {
-            "name": "JavaScript",
-            "icon": "res/logo/skills/logo-js.png",
-            "alt": "JavaScript"
+            "name": "Vue",
+            "icon": "res/logo/skills/logo-vue.png",
+            "alt": "Vue"
         },
         {
             "name": "Angular",
@@ -22,9 +12,44 @@
             "alt": "Angular"
         },
         {
-            "name": "CSS",
+            "name": "React",
+            "icon": "res/logo/skills/logo-react.png",
+            "alt": "React"
+        },
+        {
+            "name": "Typescript",
+            "icon": "res/logo/skills/logo-ts.png",
+            "alt": "Typescript"
+        },
+        {
+            "name": ".Net",
+            "icon": "res/logo/skills/logo-dotnet.png",
+            "alt": ".Net"
+        },
+        {
+            "name": "Go",
+            "icon": "res/logo/skills/logo-golang.png",
+            "alt": "Go"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "res/logo/skills/logo-js.png",
+            "alt": "JavaScript"
+        },
+        {
+            "name": "Java",
+            "icon": "res/logo/skills/logo-java.png",
+            "alt": "Java"
+        },
+        {
+            "name": "SCSS",
             "icon": "res/logo/skills/logo-css.avif.png",
-            "alt": "CSS"
+            "alt": "SCSS"
+        },
+        {
+            "name": "HTML",
+            "icon": "res/logo/skills/logo-html.png",
+            "alt": "HTML"
         },
         {
             "name": "Git",
@@ -32,9 +57,24 @@
             "alt": "Git"
         },
         {
-            "name": "HTML",
-            "icon": "res/logo/skills/logo-html.png",
-            "alt": "HTML"
+            "name": "Azure",
+            "icon": "res/logo/skills/logo-azure.png",
+            "alt": "Azure"
+        },
+        {
+            "name": "Codex",
+            "icon": "res/logo/skills/logo-codex.png",
+            "alt": "Codex"
+        },
+        {
+            "name": "Docker",
+            "icon": "res/logo/skills/logo-docker.png",
+            "alt": "Docker"
+        },
+        {
+            "name": "Figma",
+            "icon": "res/logo/skills/logo-figma.png",
+            "alt": "Figma"
         },
         {
             "name": "VSC",
