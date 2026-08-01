@@ -68,37 +68,37 @@ i:hover {
 }
 
 .theme-dark {
-    --background-color: #080007;
-    --background-second: #3a003c;
+    --background-color: #111827;
+    --background-second: #1f2937;
 
-    --font-color: #f2ffb9;
-    --font-color2: #000;
+    --font-color: #f3f4f6;
+    --font-color2: #111827;
 
-    --shade: #00000086;
+    --shade: rgba(15, 23, 42, 0.78);
 
-    --primary-color: #8b0085;
-    --secondary-color: #22009d;
-    --color-accent: #fb00ff;
+    --primary-color: #334155;
+    --secondary-color: #475569;
+    --color-accent: #8ba8d9;
 
-    --scroll-background: #008214;
-    --scroll-bar: #a2ff00;
+    --scroll-background: #475569;
+    --scroll-bar: #cbd5e1;
 }
 
 .theme-light {
-    --background-color: #ffafaf;
-    --background-second: #fff333;
+    --background-color: #f4efe8;
+    --background-second: #e6ddd1;
 
-    --font-color: #000;
-    --font-color2: #fff;
+    --font-color: #233143;
+    --font-color2: #f8f5ef;
 
-    --shade: #ffffffa9;
+    --shade: rgba(255, 255, 255, 0.82);
 
-    --primary-color: #b96eff;
-    --secondary-color: #ff9900;
-    --color-accent: #ff61d0;
+    --primary-color: #d8d6e8;
+    --secondary-color: #c4b7a6;
+    --color-accent: #7f95b8;
 
-    --scroll-background: #ffa930;
-    --scroll-bar: #463000;
+    --scroll-background: #cbbca8;
+    --scroll-bar: #5e6780;
 }
 
 body {
