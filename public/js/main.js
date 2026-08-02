@@ -14,34 +14,6 @@ if (navClose) {
         navMenu.classList.remove('show-menu');
     });
 }
-//THEMES
-var themeChange = myDocument.getElementById('light-mode');
-// function to toggle between light and dark theme
-var toggleTheme = function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light');
-    }
-    else {
-        setTheme('theme-dark');
-    }
-};
-// function to set a given theme/color-scheme
-var setTheme = function (themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-};
-// Immediately invoked function to set the theme on initial load
-(function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-    }
-    else {
-        setTheme('theme-light');
-    }
-})();
-if (themeChange) {
-    themeChange.addEventListener('click', toggleTheme);
-}
 
 var renderWebProjects = function (data) {
     var container = document.getElementById('web-projects-container');
