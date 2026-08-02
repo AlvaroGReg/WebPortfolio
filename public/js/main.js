@@ -15,6 +15,7 @@ if (navClose) {
     });
 }
 
+/* WEB PROJECTS (temporarily disabled; restore with the #web HTML section)
 var renderWebProjects = function (data) {
     var container = document.getElementById('web-projects-container');
     if (!container) {
@@ -40,6 +41,7 @@ var renderWebProjects = function (data) {
         sectionTitle.textContent = data.sectionTitle;
     }
 };
+*/
 
 var renderOtherProjects = function (data) {
     var container = document.getElementById('other-projects-container');
@@ -139,7 +141,8 @@ var renderLocalizedData = function () {
     });
 };
 myDocument.addEventListener('languagechange', renderLocalizedData);
-loadJsonData('data/web-projects.json', renderWebProjects);
+// WEB PROJECTS (temporarily disabled; restore with renderWebProjects and the #web HTML section)
+// loadJsonData('data/web-projects.json', renderWebProjects);
 loadJsonData('data/other-projects.json', renderOtherProjects);
 loadJsonData('data/skills.json', renderSkills);
 loadJsonData('data/contact.json', renderContact);
@@ -150,18 +153,16 @@ var scrollFlag = 1;
 var sectionPositions = {
     home: 0,
     about: -100,
-    web: -200,
-    other: -300,
-    skills: -400,
-    contact: -500
+    other: -200,
+    skills: -300,
+    contact: -400
 };
 var sectionIdByPosition = {
     0: 'home',
     '-100': 'about',
-    '-200': 'web',
-    '-300': 'other',
-    '-400': 'skills',
-    '-500': 'contact'
+    '-200': 'other',
+    '-300': 'skills',
+    '-400': 'contact'
 };
 var isMobileViewport = function () {
     return window.matchMedia('(max-width: 768px)').matches || window.matchMedia('(pointer: coarse)').matches || 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -217,7 +218,7 @@ var scrollEvent = function (event) {
     if (event.deltaY < 0 && scrolling < 0) {
         scrolling += 100;
     }
-    else if (event.deltaY > 0 && scrolling > -500) {
+    else if (event.deltaY > 0 && scrolling > -400) {
         scrolling -= 100;
     }
     wrapperScroll(scrolling);

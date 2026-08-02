@@ -8,7 +8,7 @@
                 home: 'Inicio',
                 about: 'Sobre mí',
                 web: 'Web',
-                other: 'Otros',
+                other: 'Proyectos',
                 skills: 'Habilidades',
                 contact: 'Contacto'
             },
@@ -23,7 +23,7 @@
             },
             sections: {
                 web: 'Proyectos web',
-                other: 'Otros proyectos',
+                other: 'Proyectos',
                 skills: 'Habilidades',
                 contact: 'Contacto'
             },
@@ -36,7 +36,7 @@
                 home: 'Home',
                 about: 'About me',
                 web: 'Web',
-                other: 'Other',
+                other: 'Projects',
                 skills: 'Skills',
                 contact: 'Contact'
             },

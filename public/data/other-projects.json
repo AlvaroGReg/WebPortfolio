@@ -1,21 +1,69 @@
 {
-    "sectionTitle": { "es": "Otros proyectos", "en": "Other projects" },
+    "sectionTitle": { "es": "Mis proyectos", "en": "My projects" },
     "items": [
         {
+            "title": { "es": "SnippetDome", "en": "SnippetDome" },
+            "description": { "es": "Aplicación fullstack con Weils-Go y React-Ts", "en": "Fullstack project using Weils-Go and React-Ts." },
+            "url": "https://github.com/AlvaroGReg/SnippetsDome",
+            "image": "res/other/snippets.png",
+            "alt": { "es": "Web Pokédex", "en": "Pokédex website" },
+            "linkText": { "es": "Ver repositorio", "en": "View project" }
+        },
+        {
+            "title": { "es": "MechabellumUtil", "en": "MechabellumUtil" },
+            "description": { "es": "Herramienta para cálculo de unidades óptimas en videojuego 'Mechabellum'.", "en": "Tool for calculate optimum units on Mechabellum videogame." },
+            "url": "https://alvarogreg.github.io/MechabellumUtil/",
+            "image": "res/other/mechabellum.png",
+            "alt": { "es": "MechabellumUtil", "en": "MechabellumUtil" },
+            "linkText": { "es": "Ver proyecto", "en": "View project" }
+        },
+        {
+            "title": { "es": "SudokuSolver", "en": "SudokuSolver" },
+            "description": { "es": "App android para resolver sudokus por recursión.", "en": "Android app that resolves sudokus by recursion" },
+            "url": "https://github.com/AlvaroGReg/SudokuSolver2",
+            "image": "res/other/sudoku-solver.png",
+            "alt": { "es": "SudokuSolver", "en": "SudokuSolver" },
+            "linkText": { "es": "Ver repositorio", "en": "View repository" }
+        },
+        {
+            "title": { "es": "TipsPro", "en": "TipsPro" },
+            "description": { "es": "Aplicación Android en kotlin de cálculo de propinas. Realizada haciendo curso oficial de AndroidDevelopers.", "en": "Android app on Kotlin that calculates tips. Made following AndroidDevelopers documentation." },
+            "url": "https://github.com/AlvaroGReg/TipsPro",
+            "image": "res/other/tips-pro.png",
+            "alt": { "es": "TipsPro", "en": "TipsPro" },
+            "linkText": { "es": "Ver repositorio", "en": "View repository" }
+        },
+        {
             "title": { "es": "Pokédex", "en": "Pokédex" },
-            "description": { "es": "Proyecto realizado con el objetivo de probar consultas a APIs externas en JavaScript.", "en": "Project created to test queries to external APIs in JavaScript." },
-            "url": "https://web-pokedex.glitch.me",
+            "description": { "es": "Uno de mis primeros proyectos, aprendiendo a hacer consultas APIs externas en JavaScript.", "en": "One of my first projects for learning queries to external APIs in JavaScript." },
+            "url": "https://alvarogreg.github.io/Web-Pokedex/",
             "image": "res/other/img-pokedex.png",
             "alt": { "es": "Web Pokédex", "en": "Pokédex website" },
             "linkText": { "es": "Ver proyecto", "en": "View project" }
         },
         {
+            "title": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
+            "description": { "es": "Web de turismo centrada en explorar Bootstrap. Sin responsive.", "en": "Tourism website focused on exploring Bootstrap. No responsive." },
+            "url": "https://alvarogreg.github.io/LakesWeb/",
+            "image": "res/webprojects/lakes.png",
+            "alt": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
+        },
+        {
+            "title": { "es": "Casa Rural Trefacio", "en": "Trefacio Country House" },
+            "description": { "es": "Landing page por encargo para una casa rural, destacando la galería y los enlaces sociales.", "en": "Commissioned landing page for a country house, highlighting its gallery and social links." },
+            "url": "https://alvarogreg.github.io/CasaRural/",
+            "image": "res/webprojects/casarural.png",
+            "alt": { "es": "Portada casa rural", "en": "Country house cover" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
+        },
+        {
             "title": { "es": "Super Bob Spang", "en": "Super Bob Spang" },
-            "description": { "es": "Videojuego arcade retro programado desde cero con físicas de burbujas y animaciones propias.", "en": "Retro arcade game programmed from scratch, with bubble physics and custom animations." },
-            "url": "https://super-bob-spang.glitch.me",
+            "description": { "es": "Sin terminar. Videojuego arcade retro programado desde cero con físicas de burbujas y animaciones propias.", "en": "Ongoing. Retro arcade game programmed from scratch, with bubble physics and custom animations." },
+            "url": "https://github.com/AlvaroGReg/SuperPang-web-2023",
             "image": "res/other/img-bobspang.png",
             "alt": { "es": "Captura del proyecto", "en": "Project screenshot" },
-            "linkText": { "es": "Ver proyecto", "en": "View project" }
+            "linkText": { "es": "Ver repositorio", "en": "View repository" }
         }
     ]
 }

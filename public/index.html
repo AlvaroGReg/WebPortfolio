@@ -31,22 +31,24 @@
                             <p data-i18n="nav.about">Sobre mí</p>
                         </li>
                     </a>
+                    <!-- WEB PROJECTS NAVIGATION (temporarily disabled; restore together with the section below)
                     <a onclick='wrapperScroll(-200)' id="sectionweb">
                         <li>
                             <p data-i18n="nav.web">Web</p>
                         </li>
                     </a>
-                    <a onclick='wrapperScroll(-300)' id="sectionother">
+                    -->
+                    <a onclick='wrapperScroll(-200)' id="sectionother">
                         <li>
-                            <p data-i18n="nav.other">Otros</p>
+                            <p data-i18n="nav.other">Proyectos</p>
                         </li>
                     </a>
-                    <a onclick='wrapperScroll(-400)' id="sectionskills">
+                    <a onclick='wrapperScroll(-300)' id="sectionskills">
                         <li>
                             <p data-i18n="nav.skills">Habilidades</p>
                         </li>
                     </a>
-                    <a onclick='wrapperScroll(-500)' id="sectioncontact">
+                    <a onclick='wrapperScroll(-400)' id="sectioncontact">
                         <li>
                             <p data-i18n="nav.contact">Contacto</p>
                         </li>
@@ -75,10 +77,12 @@
         <div class="margindots">
             <span class="dot marked" id="dothome" onclick='wrapperScroll("0")'></span>
             <span class="dot" id="dotabout" onclick='wrapperScroll("-100")'></span>
+            <!-- WEB PROJECTS DOT (temporarily disabled; restore together with the section below)
             <span class="dot" id="dotweb" onclick='wrapperScroll("-200")'></span>
-            <span class="dot" id="dotother" onclick='wrapperScroll("-300")'></span>
-            <span class="dot" id="dotskills" onclick='wrapperScroll("-400")'></span>
-            <span class="dot" id="dotcontact" onclick='wrapperScroll("-500")'></span>
+            -->
+            <span class="dot" id="dotother" onclick='wrapperScroll("-200")'></span>
+            <span class="dot" id="dotskills" onclick='wrapperScroll("-300")'></span>
+            <span class="dot" id="dotcontact" onclick='wrapperScroll("-400")'></span>
         </div>
         <div class="wrapper" id="wrapper">
             <!--HOME-->
@@ -95,7 +99,7 @@
                     </div>
                     <div class="homebuttons">
                         <a class="button" onclick='wrapperScroll("-200")' data-i18n="home.projects">Proyectos</a>
-                        <a class="button" onclick='wrapperScroll("-500")' data-i18n="home.contact">Contactar</a>
+                        <a class="button" onclick='wrapperScroll("-400")' data-i18n="home.contact">Contactar</a>
                     </div>
                 </div>
             </section>
@@ -114,20 +118,21 @@
                         en Integramedia Digital haciendo tiendas online en un stack híbrido de Vue y .Net y aplicaciones
                         de uso interno en Brazor. También me he acostumbrado a manejar Azure y SQL desde que estoy aquí.
                     </p>
-                    <a class="button" onclick='wrapperScroll("-500")' data-i18n="home.contact">Contactar</a>
+                    <a class="button" onclick='wrapperScroll("-400")' data-i18n="home.contact">Contactar</a>
                 </div>
             </section>
-            <!--WEB PROJECTS-->
+            <!-- WEB PROJECTS (temporarily disabled; restore this block and its navigation above together)
             <section class="webprojects" id="web">
                 <div>
                     <h2 class="sectiontitle" data-i18n="sections.web">Proyectos web</h2>
                 </div>
                 <div class="articlescontainer" id="web-projects-container"></div>
             </section>
+            -->
             <!--OTHER PROJECTS-->
             <section class="otherprojects" id="other">
                 <div>
-                    <h2 class="sectiontitle" data-i18n="sections.other">Otros proyectos</h2>
+                    <h2 class="sectiontitle" data-i18n="sections.other">Proyectos</h2>
                 </div>
                 <div class="projectscontainer" id="other-projects-container"></div>
             </section>
