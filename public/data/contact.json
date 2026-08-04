@@ -9,6 +9,13 @@
             "alt": { "es": "Correo electrónico", "en": "Email" }
         },
         {
+            "name": { "es": "Github", "en": "Github" },
+            "description": { "es": "Mi perfil de github", "en": "My github profile" },
+            "url": "https://github.com/AlvaroGReg",
+            "icon": "res/logo/social/github.png",
+            "alt": { "es": "Github", "en": "Github" }
+        },
+        {
             "name": { "es": "Telegram", "en": "Telegram" },
             "description": { "es": "Habla conmigo por Telegram", "en": "Chat with me on Telegram" },
             "url": "https://t.me/alvaro_lernek",
