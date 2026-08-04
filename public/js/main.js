@@ -43,21 +43,54 @@ var renderWebProjects = function (data) {
 };
 */
 
+var selectedOtherProjectTag = null;
 var renderOtherProjects = function (data) {
     var container = document.getElementById('other-projects-container');
+    var tagsContainer = document.getElementById('other-project-tags');
     if (!container) {
         return;
     }
 
     data = i18n.localizeData(data);
+    var tagsById = {};
+    data.items.forEach(function (item) {
+        (item.tags || []).forEach(function (tag) {
+            tagsById[tag.id] = tag;
+        });
+    });
+    var tags = Object.keys(tagsById).map(function (id) { return tagsById[id]; });
+    var visibleItems = selectedOtherProjectTag
+        ? data.items.filter(function (item) {
+            return (item.tags || []).some(function (tag) { return tag.id === selectedOtherProjectTag; });
+        })
+        : data.items;
 
-    container.innerHTML = data.items.map(function (item) {
+    if (tagsContainer) {
+        tagsContainer.setAttribute('aria-label', data.filtersLabel);
+        tagsContainer.innerHTML = tags.map(function (tag) {
+            var isSelected = tag.id === selectedOtherProjectTag;
+            return "<button class=\"project-tag" + (isSelected ? " is-selected" : "") + "\" type=\"button\" data-tag-id=\"" + tag.id + "\" aria-pressed=\"" + isSelected + "\">" + tag.label + "</button>";
+        }).join('');
+        tagsContainer.querySelectorAll('.project-tag').forEach(function (tagButton) {
+            tagButton.addEventListener('click', function () {
+                var tagId = tagButton.getAttribute('data-tag-id');
+                selectedOtherProjectTag = selectedOtherProjectTag === tagId ? null : tagId;
+                renderOtherProjects(localizedDataSources['data/other-projects.json'].data);
+            });
+        });
+    }
+
+    container.innerHTML = visibleItems.map(function (item) {
+        var itemTags = (item.tags || []).map(function (tag) {
+            return "<span class=\"project-card-tag\">" + tag.label + "</span>";
+        }).join('');
         return "<article>\n" +
             "<div class=\"visiblediv\">\n" +
             "<img src=\"" + item.image + "\" alt=\"" + item.alt + "\">\n" +
             "</div>\n" +
             "<div class=\"invisiblediv\">\n" +
             "<p>" + item.description + "</p>\n" +
+            "<div class=\"project-card-tags\">" + itemTags + "</div>\n" +
             "<a href=\"" + item.url + "\" target=\"_blank\">" + item.linkText + " &gt;</a>\n" +
             "</div>\n" +
             "</article>";

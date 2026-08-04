@@ -537,6 +537,40 @@ header>nav>.iconsmargin>.ducklogo {
     overflow: hidden;
 }
 
+.otherprojects>.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    max-width: 70rem;
+}
+
+.project-tag,
+.project-card-tag {
+    border: 1px solid var(--secondary-color);
+    border-radius: 999px;
+    color: var(--font-color);
+    font-family: 'basictext';
+}
+
+.project-tag {
+    background: var(--primary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .35rem .75rem;
+}
+
+.project-tag:hover,
+.project-tag.is-selected {
+    background: var(--color-accent);
+}
+
+.project-tag:focus-visible {
+    outline: 2px solid var(--font-color);
+    outline-offset: 2px;
+}
+
 .otherprojects>.projectscontainer {
     display: grid;
     gap: 10px;
@@ -581,6 +615,20 @@ header>nav>.iconsmargin>.ducklogo {
 
 .otherprojects>.projectscontainer>article>.invisiblediv>a:-webkit-any-link:hover {
     background-color: var(--background-color);
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    justify-content: center;
+    margin: .5rem 0;
+}
+
+.project-card-tag {
+    background: var(--primary-color);
+    font-size: .85rem;
+    padding: .2rem .55rem;
 }
 
 .otherprojects>.projectscontainer>article:hover .invisiblediv {
@@ -768,6 +816,11 @@ footer>img {
 
     .otherprojects>.projectscontainer{
         grid-template-columns: 430px;
+    }
+
+    .otherprojects>.project-tags {
+        max-height: 9rem;
+        overflow-y: auto;
     }
 }
 

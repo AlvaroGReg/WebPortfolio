@@ -1,5 +1,6 @@
 {
     "sectionTitle": { "es": "Mis proyectos", "en": "My projects" },
+    "filtersLabel": { "es": "Filtrar proyectos por tecnología o práctica", "en": "Filter projects by technology or practice" },
     "items": [
         {
             "title": { "es": "SnippetDome", "en": "SnippetDome" },
@@ -7,7 +8,14 @@
             "url": "https://github.com/AlvaroGReg/SnippetsDome",
             "image": "res/other/snippets.png",
             "alt": { "es": "Web Pokédex", "en": "Pokédex website" },
-            "linkText": { "es": "Ver repositorio", "en": "View project" }
+            "linkText": { "es": "Ver repositorio", "en": "View project" },
+            "tags": [
+                { "id": "go", "label": { "es": "Go", "en": "Go" } },
+                { "id": "react", "label": { "es": "React", "en": "React" } },
+                { "id": "typescript", "label": { "es": "TypeScript", "en": "TypeScript" } },
+                { "id": "fullstack", "label": { "es": "Full stack", "en": "Full stack" } },
+                { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } }
+            ]
         },
         {
             "title": { "es": "MechabellumUtil", "en": "MechabellumUtil" },
@@ -15,7 +23,13 @@
             "url": "https://alvarogreg.github.io/MechabellumUtil/",
             "image": "res/other/mechabellum.png",
             "alt": { "es": "MechabellumUtil", "en": "MechabellumUtil" },
-            "linkText": { "es": "Ver proyecto", "en": "View project" }
+            "linkText": { "es": "Ver proyecto", "en": "View project" },
+            "tags": [
+                { "id": "frontend", "label": { "es": "Front-End", "en": "Front-End" } },
+                { "id": "javascript", "label": { "es": "JavaScript", "en": "JavaScript" } },
+                { "id": "algorithms", "label": { "es": "Algoritmos", "en": "Algorithms" } },
+                { "id": "frontend", "label": { "es": "Front-End", "en": "Front-End" } }
+            ]
         },
         {
             "title": { "es": "SudokuSolver", "en": "SudokuSolver" },
@@ -23,7 +37,13 @@
             "url": "https://github.com/AlvaroGReg/SudokuSolver2",
             "image": "res/other/sudoku-solver.png",
             "alt": { "es": "SudokuSolver", "en": "SudokuSolver" },
-            "linkText": { "es": "Ver repositorio", "en": "View repository" }
+            "linkText": { "es": "Ver repositorio", "en": "View repository" },
+            "tags": [
+                { "id": "android", "label": { "es": "Android", "en": "Android" } },
+                { "id": "java", "label": { "es": "Java", "en": "Java" } },
+                { "id": "recursion", "label": { "es": "Recursión", "en": "Recursion" } },
+                { "id": "frontend", "label": { "es": "Front-End", "en": "Front-End" } }
+            ]
         },
         {
             "title": { "es": "TipsPro", "en": "TipsPro" },
@@ -31,7 +51,13 @@
             "url": "https://github.com/AlvaroGReg/TipsPro",
             "image": "res/other/tips-pro.png",
             "alt": { "es": "TipsPro", "en": "TipsPro" },
-            "linkText": { "es": "Ver repositorio", "en": "View repository" }
+            "linkText": { "es": "Ver repositorio", "en": "View repository" },
+            "tags": [
+                { "id": "android", "label": { "es": "Android", "en": "Android" } },
+                { "id": "frontend", "label": { "es": "Front-End", "en": "Front-End" } },
+                { "id": "kotlin", "label": { "es": "Kotlin", "en": "Kotlin" } },
+                { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } }
+            ]
         },
         {
             "title": { "es": "Pokédex", "en": "Pokédex" },
@@ -39,7 +65,12 @@
             "url": "https://alvarogreg.github.io/Web-Pokedex/",
             "image": "res/other/img-pokedex.png",
             "alt": { "es": "Web Pokédex", "en": "Pokédex website" },
-            "linkText": { "es": "Ver proyecto", "en": "View project" }
+            "linkText": { "es": "Ver proyecto", "en": "View project" },
+            "tags": [
+                { "id": "javascript", "label": { "es": "JavaScript", "en": "JavaScript" } },
+                { "id": "rest-api", "label": { "es": "API REST", "en": "REST API" } },
+                { "id": "frontend", "label": { "es": "Frontend", "en": "Frontend" } }
+            ]
         },
         {
             "title": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
@@ -47,7 +78,13 @@
             "url": "https://alvarogreg.github.io/LakesWeb/",
             "image": "res/webprojects/lakes.png",
             "alt": { "es": "Lagos Glaciares", "en": "Glacial Lakes" },
-            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" },
+            "tags": [
+                { "id": "html", "label": { "es": "HTML", "en": "HTML" } },
+                { "id": "frontend", "label": { "es": "Front-End", "en": "Front-End" } },
+                { "id": "css", "label": { "es": "CSS", "en": "CSS" } },
+                { "id": "bootstrap", "label": { "es": "Bootstrap", "en": "Bootstrap" } }
+            ]
         },
         {
             "title": { "es": "Casa Rural Trefacio", "en": "Trefacio Country House" },
@@ -55,7 +92,13 @@
             "url": "https://alvarogreg.github.io/CasaRural/",
             "image": "res/webprojects/casarural.png",
             "alt": { "es": "Portada casa rural", "en": "Country house cover" },
-            "linkText": { "es": "Visitar sitio", "en": "Visit site" }
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" },
+            "tags": [
+                { "id": "html", "label": { "es": "HTML", "en": "HTML" } },
+                { "id": "css", "label": { "es": "CSS", "en": "CSS" } },
+                { "id": "landing-page", "label": { "es": "Landing page", "en": "Landing page" } },
+                { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } }
+            ]
         },
         {
             "title": { "es": "Super Bob Spang", "en": "Super Bob Spang" },
@@ -63,7 +106,14 @@
             "url": "https://github.com/AlvaroGReg/SuperPang-web-2023",
             "image": "res/other/img-bobspang.png",
             "alt": { "es": "Captura del proyecto", "en": "Project screenshot" },
-            "linkText": { "es": "Ver repositorio", "en": "View repository" }
+            "linkText": { "es": "Ver repositorio", "en": "View repository" },
+            "tags": [
+                { "id": "javascript", "label": { "es": "JavaScript", "en": "JavaScript" } },
+                { "id": "html", "label": { "es": "HTML", "en": "HTML" } },
+                { "id": "css", "label": { "es": "CSS", "en": "CSS" } },
+                { "id": "game-development", "label": { "es": "Desarrollo de videojuegos", "en": "Game development" } },
+                { "id": "physics", "label": { "es": "Físicas", "en": "Physics" } }
+            ]
         }
     ]
 }
