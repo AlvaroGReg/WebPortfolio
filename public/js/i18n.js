@@ -26,8 +26,7 @@
                 other: 'Proyectos',
                 skills: 'Habilidades',
                 contact: 'Contacto'
-            },
-            duckLogo: 'Logo de pato AGREG'
+            }
         },
         en: {
             documentTitle: 'AGReg Portfolio',
@@ -54,8 +53,7 @@
                 other: 'Other projects',
                 skills: 'Skills',
                 contact: 'Contact'
-            },
-            duckLogo: 'AGREG duck logo'
+            }
         }
     };
     var getBrowserLanguage = function () {

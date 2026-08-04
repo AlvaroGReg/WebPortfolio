@@ -12,6 +12,34 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-color: var(--scroll-bar) var(--scroll-background);
+    scrollbar-width: thin;
+}
+
+/* Theme-aware scrollbars for the document and overflowed project lists. */
+* {
+    scrollbar-color: var(--scroll-bar) var(--scroll-background);
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--scroll-background);
+    border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--scroll-bar);
+    border: 3px solid var(--scroll-background);
+    border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
 }
 
 .button {
@@ -235,11 +263,11 @@ section {
     transition: opacity 0.1s;
 }
 
-.animation3s{
+.animation3s {
     animation: write 3s;
 }
 
-.opacity1{
+.opacity1 {
     opacity: 1;
 }
 
@@ -340,9 +368,8 @@ header>nav>.navM>ul>a.active {
 }
 
 header>nav>.iconsmargin {
-    margin-right: 2em;
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 1rem;
 }
 
@@ -379,12 +406,7 @@ header>nav>.iconsmargin {
     font-size: 2em;
 }
 
-header>nav>.iconsmargin>.ducklogo {
-    width: 2em;
-}
-
 /*DOTS*/
-
 .margindots {
     position: fixed;
     margin: auto;
@@ -433,10 +455,10 @@ header>nav>.iconsmargin>.ducklogo {
 }
 
 .home>.hometxtdiv {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .home>.hometxtdiv>.homedata>.mainname {
@@ -451,14 +473,14 @@ header>nav>.iconsmargin>.ducklogo {
 }
 
 .aboutme>.aboutdata {
-    width: 60%;
-    text-align: justify;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: justify;
+    width: 60%;
 
-    @media (width <= 500px) {
+    @media (width <=780px) {
         width: 100%;
     }
 }
@@ -469,18 +491,18 @@ header>nav>.iconsmargin>.ducklogo {
 }
 
 .webprojects>.articlescontainer {
-    max-width: 100%;
-    margin-left: 5px;
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    margin-left: 5px;
+    max-width: 100%;
     overflow: auto;
 }
 
 .webprojects>.articlescontainer>article {
-    position: relative;
     max-width: 480px;
+    position: relative;
 }
 
 .article1 {
@@ -731,9 +753,16 @@ footer>img {
 
 @media (max-width: 720px) {
 
-    nav{
-        justify-content: end !important;
+    header>nav {
+        height: unset;
+        justify-content: space-between;
+        padding: 10px;
+
+        .navtoggle {
+            position: unset;
+        }
     }
+
     .navM {
         position: fixed;
         top: -150%;
@@ -748,10 +777,6 @@ footer>img {
         flex-direction: column;
         align-items: start;
         height: fit-content !important;
-    }
-
-    header>nav>.navtoggle {
-        top: 0;
     }
 
     header>nav>.navM>.navclose {
@@ -779,42 +804,45 @@ footer>img {
         font-size: 3em;
     }
 
-    .sectiontitle{
+    .sectiontitle {
         margin: 10px;
     }
 
-    .home{
+    .home {
         flex-direction: column;
     }
 
-    .home>.homeimgdiv{
+    .home>.homeimgdiv {
         display: flex;
         justify-content: center;
     }
-    .home>.hometxtdiv>.homedata{
+
+    .home>.hometxtdiv>.homedata {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .home>.hometxtdiv>.homedata>div{
+
+    .home>.hometxtdiv>.homedata>div {
         width: fit-content;
     }
-    .home>.hometxtdiv>.homedata>div>.sectiontitle{
+
+    .home>.hometxtdiv>.homedata>div>.sectiontitle {
         text-align: center;
         width: fit-content;
     }
 
-    .aboutme>.aboutdata>p{
+    .aboutme>.aboutdata>p {
         text-align: left;
     }
 
-    .webprojects>.articlescontainer{
+    .webprojects>.articlescontainer {
         overflow: scroll;
         padding-left: 50px;
         padding-right: 50px;
     }
 
-    .otherprojects>.projectscontainer{
+    .otherprojects>.projectscontainer {
         grid-template-columns: 430px;
     }
 
@@ -829,13 +857,13 @@ footer>img {
     top: 0;
 }
 
-@media (width <= 480px){
-    .webprojects>.articlescontainer{
+@media (width <=480px) {
+    .webprojects>.articlescontainer {
         padding-left: 10px;
         padding-right: 10px;
     }
 
-    .aboutme>.aboutdata>p{
+    .aboutme>.aboutdata>p {
         font-size: 1.1em;
     }
 
@@ -844,10 +872,9 @@ footer>img {
         max-width: 320px;
     }
 
-    .contact>.socialmedialinks{
+    .contact>.socialmedialinks {
         display: grid;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
-
