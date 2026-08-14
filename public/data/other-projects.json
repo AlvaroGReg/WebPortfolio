@@ -16,6 +16,23 @@
                 { "id": "fullstack", "label": { "es": "Full stack", "en": "Full stack" } },
                 { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } }
             ]
+        },        
+        {
+            "title": { "es": "Con4", "en": "Con4" },
+            "description": { "es": "Minijuego web con Vue, clásico Conecta 4", "en": "Web minigame using Vue. Classic Connect 4" },
+            "url": "https://alvarogreg.github.io/Con4/",
+            "image": "res/other/con4.png",
+            "alt": { "es": "Con4", "en": "Con4" },
+            "linkText": { "es": "Jugar", "en": "Play" },
+            "tags": [
+                { "id": "vue", "label": { "es": "Vue", "en": "Vue" } },
+                { "id": "css", "label": { "es": "React", "en": "React" } },
+                { "id": "typescript", "label": { "es": "TypeScript", "en": "TypeScript" } },
+                { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } },
+                { "id": "game-development", "label": { "es": "Desarrollo de videojuegos", "en": "Game development" } },
+                { "id": "physics", "label": { "es": "Físicas", "en": "Physics" } },
+                { "id": "frontend", "label": { "es": "Frontend", "en": "Frontend" } }
+            ]
         },
         {
             "title": { "es": "MechabellumUtil", "en": "MechabellumUtil" },
