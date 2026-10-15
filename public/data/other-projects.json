@@ -3,6 +3,20 @@
     "filtersLabel": { "es": "Filtrar proyectos por tecnología o práctica", "en": "Filter projects by technology or practice" },
     "items": [
         {
+            "title": { "es": "EZ-Nihongo", "en": "EZ-Nihongo" },
+            "description": { "es": "Web responsive para aprender japonés, desarrollada con Vue y ASP.NET Core.", "en": "Responsive website for learning Japanese, built with Vue and ASP.NET Core." },
+            "url": "https://alvarogreg.github.io/ez-nihongo-web/#/",
+            "image": "res/other/ez-nihongo.webp",
+            "alt": { "es": "Captura de EZ-Nihongo", "en": "EZ-Nihongo screenshot" },
+            "linkText": { "es": "Visitar sitio", "en": "Visit site" },
+            "tags": [
+                { "id": "vue", "label": { "es": "Vue", "en": "Vue" } },
+                { "id": "aspnet-core", "label": { "es": "ASP.NET Core", "en": "ASP.NET Core" } },
+                { "id": "fullstack", "label": { "es": "Full stack", "en": "Full stack" } },
+                { "id": "responsive-design", "label": { "es": "Diseño responsive", "en": "Responsive design" } }
+            ]
+        },
+        {
             "title": { "es": "SnippetDome", "en": "SnippetDome" },
             "description": { "es": "Aplicación fullstack con Weils-Go y React-Ts", "en": "Fullstack project using Weils-Go and React-Ts." },
             "url": "https://github.com/AlvaroGReg/SnippetsDome",
